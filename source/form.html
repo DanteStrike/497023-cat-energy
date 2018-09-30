@@ -35,80 +35,80 @@
         <h2 class="request__title visually-hidden">Заявка</h2>
         <p class="request__annotation">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
-        <form class="request__form" action="https://echo.htmlacademy.ru">
-          <fieldset class="request__about-cat about-cat">
-            <legend class="about-cat__title visually-hidden">О Коте</legend>
-            <ul class="about-cat__propertys">
-              <li class="about-cat__property">
-                <label class="about-cat__label label" for="about-cat__property-name">Имя:<sup>*</sup></label>
-                <input class="about-cat__input input" type="text" name="cat-name" id="about-cat__property-name" placeholder="Барсик" required>
+        <form class="request__form" action="https://echo.htmlacademy.ru" method="GET">
+          <fieldset class="request__cat">
+            <legend class="request__cat-title visually-hidden">О Коте</legend>
+            <ul class="request__cat-propertys">
+              <li class="request__cat-property">
+                <label class="request__label label" for="request__cat-name">Имя:<sup>*</sup></label>
+                <input class="request__input input" type="text" name="cat-name" id="request__cat-name" placeholder="Барсик" required>
               </li>
-              <li class="about-cat__property">
-                <label class="about-cat__label label" for="about-cat__property-weight">Вес (кг):<sup>*</sup></label>
-                <input class="about-cat__input input" type="number" name="cat-weight" id="about-cat__property-weight" placeholder="7" required>
+              <li class="request__cat-property">
+                <label class="request__label label" for="request__cat-weight">Вес (кг):<sup>*</sup></label>
+                <input class="request__input input" type="number" name="cat-weight" id="request__cat-weight" placeholder="7" required>
               </li>
-              <li class="about-cat__property">
-                <label class="about-cat__label label" for="about-cat__property-age">Возраст (лет):</label>
-                <input class="about-cat__input input" type="number" name="cat-age" id="about-cat__property-age" placeholder="7">
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="request__goals goals">
-            <legend class="goals__title visually-hidden">Цель</legend>
-            <ul class="goals__list">
-              <li class="goals__item">
-                <input class="visually-hidden" type="radio" name="goal" id="goals__item-loss" value="loss" checked>
-                <label class="goals__item-label label" for="goals__item-loss">Похудение</label>
-              </li>
-              <li class="goals__item">
-                <input class="visually-hidden" type="radio" name="goal" id="goals__item-mass" value="mass">
-                <label class="goals__item-label label" for="goals__item-mass">Набор массы</label>
-              </li>
-              <li class="goals__item">
-                <input class="visually-hidden" type="radio" name="goal" id="goals__item-help" value="help">
-                <label class="goals__item-label label" for="goals__item-help">Не знаю (Нужен ваш совет)</label>
+              <li class="request__cat-property">
+                <label class="request__label label" for="request__cat-age">Возраст (лет):</label>
+                <input class="request__input input" type="number" name="cat-age" id="request__cat-age" placeholder="7">
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="request__owner owner">
-            <legend class="owner__title">Контактные данные (владельца кота)</legend>
-            <ul class="owner__list">
-              <li class="owner__item">
-                <label class="owner__item-label label" for="owner__item-email">E-mail:<sup>*</sup></label>
-                <input class="owner__item-input input" type="email" name="owner-email" id="owner__item-email" placeholder="kuklachev@gmail.com" required>
+          <fieldset class="request__goals">
+            <legend class="request__goals-title visually-hidden">Цель</legend>
+            <ul class="request__goals-list">
+              <li class="request__goals-item">
+                <input class="visually-hidden" type="radio" name="goal" id="request__goals-loss" value="loss" checked>
+                <label class="request__label label" for="request__goals-loss">Похудение</label>
               </li>
-              <li class="owner__item">
-                <label class="owner__item-label label" for="owner__item-tel">Телефон:<sup>*</sup></label>
-                <input class="owner__item-input input" type="tel" name="owner-tel" id="owner__item-tel" placeholder="8 (960) 900-60-90" required>
+              <li class="request__goals-item">
+                <input class="visually-hidden" type="radio" name="goal" id="request__goals-mass" value="mass">
+                <label class="request__label label" for="request__goals-mass">Набор массы</label>
+              </li>
+              <li class="request__goals-item">
+                <input class="visually-hidden" type="radio" name="goal" id="request__goals-help" value="help">
+                <label class="request__label label" for="request__goals-help">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
 
-          <div class="request__comment comment">
-            <label for="comment__area">Комментарий</label>
-            <textarea name="comment-text" id="comment__area" cols="33" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <fieldset class="request__owner">
+            <legend class="request__owner-title">Контактные данные (владельца кота)</legend>
+            <ul class="request__owner-list">
+              <li class="request__owner-item">
+                <label class="request__label label" for="request__owner-email">E-mail:<sup>*</sup></label>
+                <input class="request__input input" type="email" name="owner-email" id="request__owner-email" placeholder="kuklachev@gmail.com" required>
+              </li>
+              <li class="request__owner-item">
+                <label class="request__label label" for="request__owner-tel">Телефон:<sup>*</sup></label>
+                <input class="request__input input" type="tel" name="owner-tel" id="request__owner-tel" placeholder="8 (960) 900-60-90" required>
+              </li>
+            </ul>
+          </fieldset>
+
+          <div class="request__comment">
+            <label class="request__comment-title" for="request__comment-text">Комментарий</label>
+            <textarea name="request__comment-text" id="request__comment-text" cols="33" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
 
-          <fieldset class="request__additionally additionally">
-            <legend class="additionally__title">Дополнительно</legend>
-            <ul class="additionally__list">
-              <li class="additionally__item">
-                <input class="visually-hidden" type="checkbox" name="additionally" id="additionally__item-sweetener" value="sweetener" checked>
-                <label class="additionally__item-label label" for="additionally__item-sweetener">Сахарозаменитель</label>
+          <fieldset class="request__additionally">
+            <legend class="request__additionally-title">Дополнительно</legend>
+            <ul class="request__additionally-list">
+              <li class="request__additionally-item">
+                <input class="visually-hidden" type="checkbox" name="additionally" id="request__additionally-sweetener" value="sweetener" checked>
+                <label class="request__label label" for="request__additionally-sweetener">Сахарозаменитель</label>
               </li>
-              <li class="additionally__item">
-                <input class="visually-hidden" type="checkbox" name="additionally" id="additionally__item-water" value="water">
-                <label class="additionally__item-label label" for="additionally__item-water">Питьевая вода</label>
+              <li class="request__additionally-item">
+                <input class="visually-hidden" type="checkbox" name="additionally" id="request__additionally-water" value="water">
+                <label class="request__label label" for="request__additionally-water">Питьевая вода</label>
               </li>
-              <li class="additionally__item">
-                <input class="visually-hidden" type="checkbox" name="additionally" id="additionally__item-milk" value="milk">
-                <label class="additionally__item-label label" for="additionally__item-milk">Молоко</label>
+              <li class="request__additionally-item">
+                <input class="visually-hidden" type="checkbox" name="additionally" id="request__additionally-milk" value="milk">
+                <label class="request__label label" for="request__additionally-milk">Молоко</label>
               </li>
-              <li class="additionally__item">
-                <input class="visually-hidden" type="checkbox" name="additionally" id="additionally__item-vitamins" value="vitamins">
-                <label class="additionally__item-label label" for="additionally__item-vitamins">Витамины</label>
+              <li class="request__additionally-item">
+                <input class="visually-hidden" type="checkbox" name="additionally" id="request__additionally-vitamins" value="vitamins">
+                <label class="request__label label" for="request__additionally-vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
@@ -132,19 +132,17 @@
 
     <footer class="footer">
       <img class="footer__main-title main-title main-title--footer" src="http://placehold.it/100x18" alt="CAT ENERGY" width="101" height="18">
-      <div class="footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="#" class="social__link social__link--vk">VK</a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--inst">Instagram</a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--fb">FaceBook</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a href="#" class="social__link social__link--vk">VK</a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--inst">Instagram</a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--fb">FaceBook</a>
+        </li>
+      </ul>
       <div class="footer__copyright">
         <span class="footer__copyright-text">HTML Academy</span>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link">HTML Academy logo</a>
