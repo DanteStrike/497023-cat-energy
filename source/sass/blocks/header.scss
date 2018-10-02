@@ -1,0 +1,23 @@
+.header {
+  padding: 0;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.header__wrap {
+  min-height: 66px;
+
+  border-bottom: 1px solid $navMainItemBorderColor;
+}
+
+.header__button {
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+
+  border: 0;
+}

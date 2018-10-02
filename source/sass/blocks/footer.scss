@@ -1,0 +1,33 @@
+.footer {
+  padding-top: 40px;
+
+  background-color: $footerBgColor;
+}
+
+.footer__main-title {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 29px;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  min-height: 78px;
+  padding-top: 30px;
+}
+
+.footer__copyright-text {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $arialFont;
+  color: $footerCopyrightColor;
+}
+
+.footer__copyright-link {
+  font-size: 0;
+}

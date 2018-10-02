@@ -1,0 +1,218 @@
+.request {
+  min-height: 1230px;
+  margin-bottom: 27px;
+
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.request__annotation {
+  width: 230px;
+  margin: 0;
+  margin-top: -4px;
+  margin-bottom: 38px;
+  padding: 0;
+
+  font-size: 14px;
+}
+
+.request__cat {
+  margin: 0;
+  margin-bottom: 44px;
+  padding: 0;
+
+  border: none;
+}
+
+.request__cat-propertys {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.request__cat-property {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+.request__label {
+  display: block;
+  flex-shrink: 0;
+  margin: auto 0;
+  margin-right: 16px;
+  padding: 0;
+
+  color: $requestLabelColor;
+
+  sup {
+    vertical-align: top;
+  }
+}
+
+.request__input {
+  flex-grow: 1;
+  height: 45px;
+  margin: 0;
+  padding: 14px 15px;
+
+  font: inherit;
+  color: $requestInputColor;
+  text-transform: uppercase;
+
+  border: 1px solid $requestInputBorderColor;
+}
+
+.request__goals {
+  min-height: 115px;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+
+  border: none;
+}
+
+.request__goals-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.request__goals-item {
+  display: flex;
+  min-height: 30px;
+  margin: 0;
+  padding: 0;
+  padding-left: 46px;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.request__owner {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  border: none;
+}
+
+.request__owner-title {
+  display: block;
+  margin: 0;
+  margin-bottom: 33px;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-align: left;
+  text-transform: none;
+}
+
+.request__owner-list {
+  margin: 0;
+  padding: 0;
+}
+
+.request__owner-item {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+.request__comment {
+  margin-bottom: 33px;
+}
+
+.request__comment-title {
+  display: block;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: none;
+}
+
+.request__comment-text {
+  display: block;
+  width: 280px;
+  height: 150px;
+  margin: 0;
+  padding: 16px 10px 16px 14px;
+
+  font: inherit;
+  color: $requestInputColor;
+  text-transform: uppercase;
+
+  resize: none;
+}
+
+.request__additionally {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.request__additionally-title {
+  display: block;
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: none;
+}
+
+.request__additionally-list {
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.request__additionally-item {
+  display: flex;
+  min-height: 30px;
+  margin: 0;
+  padding: 0;
+  padding-left: 46px;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.request__button {
+  margin-bottom: 22px;
+}
+
+.request__warning {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $arialFont;
+  text-align: center;
+  text-transform: none;
+
+  sup {
+    vertical-align: top;
+  }
+}
