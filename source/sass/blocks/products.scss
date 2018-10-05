@@ -8,11 +8,10 @@
 .products__more {
   width: 100%;
   min-height: 209px;
-  margin-top: -1px;
   padding: 0 19px;
   padding-top: 78px;
 
-  border: 1px solid $productBorderColor;
+  border: 1px solid $color--whiteSmoke2;
 }
 
 .products__more-title {
@@ -36,7 +35,7 @@
   line-height: 14px;
   font-family: $arialFont;
   text-align: center;
-  color: $productPropertyColor;
+  color: $color--charcoal;
 }
 
 .products__button {

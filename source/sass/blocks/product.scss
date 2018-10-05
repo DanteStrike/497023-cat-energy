@@ -4,10 +4,10 @@
   margin: 0;
   padding: 0 19px;
 
-  border: 1px solid $productBorderColor;
+  border: 1px solid $color--whiteSmoke2;
 
-  &:not(:first-child) {
-    margin-top: -1px;
+  &:not(:last-child) {
+    border-bottom: none;
   }
 }
 
@@ -57,7 +57,7 @@
   font-size: 12px;
   line-height: 14px;
   font-family: $arialFont;
-  color: $productPropertyColor;
+  color: $color--charcoal;
 }
 
 .product__property-item {

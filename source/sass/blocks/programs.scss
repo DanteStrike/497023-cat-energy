@@ -9,7 +9,7 @@
   margin-bottom: 22px;
   padding-top: 27px;
 
-  color: $programsColor;
+  color: $color--white;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -64,7 +64,7 @@
   padding: 0 20px;
   padding-top: 30px;
 
-  background-color: $programsItemBgColor;
+  background-color: $color--whiteSmoke;
 
   &:first-child {
     margin-bottom: 20px;
@@ -92,9 +92,9 @@
   padding-bottom: 23px;
 
   font-family: $arialFont;
-  color: $programsDescriptionColor;
+  color: $color--charcoal;
 
-  border-bottom: 1px solid $programsDescriptionBorderColor;
+  border-bottom: 1px solid rgb(217, 217, 217);
 }
 
 .programs__link {

@@ -6,13 +6,13 @@
 .advantages__title {
   display: block;
   margin: 0;
+  margin-bottom: 31px;
   padding: 0;
 
   font: inherit;
   font-size: 36px;
   line-height: 60px;
   text-align: left;
-  margin-bottom: 31px;
 }
 
 .advantages__list {
@@ -30,5 +30,5 @@
   padding-left: 80px;
 
   font-family: $arialFont;
-  color: $advantagesItemColor;
+  color: $color--charcoal;
 }

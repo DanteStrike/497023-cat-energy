@@ -6,7 +6,7 @@
   &--gray {
     padding-top: 28px;
 
-    background-color: $contactsWrapBgGray;
+    background-color: $color--whiteSmoke;
   }
 }
 
@@ -29,7 +29,7 @@
   font: inherit;
   line-height: 20px;
   font-family: $arialFont;
-  color: $contactsAddressColor;
+  color: $color--charcoal;
 }
 
 .contacts__map-wrap {

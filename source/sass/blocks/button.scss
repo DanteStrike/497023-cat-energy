@@ -8,16 +8,16 @@
   font: inherit;
   line-height: 40px;
   text-align: center;
-  color: $defaultButtonColor;
+  color: $color--white;
   text-transform: uppercase;
 
-  background-color: $defaultButtonBgColor;
+  background-color: $color--green;
   border: none;
   cursor: pointer;
 
   &--gray {
-    color: $grayButtonColor;
+    color: $color--charcoal;
 
-    background-color: $grayButtonBgColor;
+    background-color: $color--whiteSmoke;
   }
 }
