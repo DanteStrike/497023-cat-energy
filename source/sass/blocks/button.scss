@@ -8,16 +8,16 @@
   font: inherit;
   line-height: 40px;
   text-align: center;
-  color: $color--white;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
 
-  background-color: $color--green;
+  background-color: rgb(104, 183, 56);
   border: none;
   cursor: pointer;
 
   &--gray {
-    color: $color--charcoal;
+    color: $basicTextColor;
 
-    background-color: $color--whiteSmoke;
+    background-color: rgb(242, 242, 242);
   }
 }

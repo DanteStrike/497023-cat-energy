@@ -3,13 +3,14 @@
 }
 
 .programs__wrap {
+  @include container;
   position: relative;
 
   min-height: 480px;
   margin-bottom: 22px;
   padding-top: 27px;
 
-  color: $color--white;
+  color: rgb(255, 255, 255);
 
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -55,6 +56,7 @@
 }
 
 .programs__list {
+  @include container;
   list-style: none;
 }
 
@@ -64,7 +66,7 @@
   padding: 0 20px;
   padding-top: 30px;
 
-  background-color: $color--whiteSmoke;
+  background-color: rgb(242, 242, 242);
 
   &:first-child {
     margin-bottom: 20px;
@@ -92,7 +94,7 @@
   padding-bottom: 23px;
 
   font-family: $arialFont;
-  color: $color--charcoal;
+  color: $basicTextColor;
 
   border-bottom: 1px solid rgb(217, 217, 217);
 }

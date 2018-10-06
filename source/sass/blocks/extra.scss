@@ -2,7 +2,7 @@
   min-height: 129px;
   padding-top: 13px;
 
-  border-bottom: 1px solid $color--veryLightGrey;
+  border-bottom: 1px solid rgb(205, 205, 205);
 }
 
 .extra__link {
@@ -35,7 +35,7 @@
   font-size: 14px;
   line-height: 14px;
   font-family: $arialFont;
-  color: $color--charcoal;
+  color: $basicTextColor;
 }
 
 .extra__property-name {

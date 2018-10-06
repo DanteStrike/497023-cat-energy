@@ -1,8 +1,13 @@
 .products {
+  @include container;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 28px;
   padding: 0;
+}
+
+.products__title {
+  @include visually-hidden;
 }
 
 .products__more {
@@ -11,7 +16,7 @@
   padding: 0 19px;
   padding-top: 78px;
 
-  border: 1px solid $color--whiteSmoke2;
+  border: 1px solid rgb(237, 237, 237);
 }
 
 .products__more-title {
@@ -35,7 +40,7 @@
   line-height: 14px;
   font-family: $arialFont;
   text-align: center;
-  color: $color--charcoal;
+  color: $basicTextColor;
 }
 
 .products__button {

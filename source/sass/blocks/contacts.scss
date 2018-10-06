@@ -1,4 +1,9 @@
+.contacts__title {
+  @include visually-hidden;
+}
+
 .contacts__wrap {
+  @include container;
   display: flex;
   justify-content: space-between;
   padding-bottom: 25px;
@@ -6,7 +11,7 @@
   &--gray {
     padding-top: 28px;
 
-    background-color: $color--whiteSmoke;
+    background-color: rgb(242, 242, 242);
   }
 }
 
@@ -29,10 +34,11 @@
   font: inherit;
   line-height: 20px;
   font-family: $arialFont;
-  color: $color--charcoal;
+  color: $basicTextColor;
 }
 
 .contacts__map-wrap {
+  @include container;
   padding: 0;
 }
 

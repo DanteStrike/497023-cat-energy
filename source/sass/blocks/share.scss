@@ -1,16 +1,21 @@
 .share {
+  @include container;
   width: 280px;
   min-height: 289px;
   margin-bottom: 35px;
   padding: 0;
   padding-top: 186px;
 
-  color: $color--white;
+  color: rgb(255, 255, 255);
 
-  background-color: $color--green;
+  background-color: rgb(104, 183, 56);
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
+}
+
+.share__title {
+  @include visually-hidden;
 }
 
 .share__description {

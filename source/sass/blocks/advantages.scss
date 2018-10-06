@@ -1,4 +1,5 @@
 .advantages {
+  @include container;
   min-height: 380px;
   margin-bottom: 39px;
 }
@@ -30,5 +31,5 @@
   padding-left: 80px;
 
   font-family: $arialFont;
-  color: $color--charcoal;
+  color: $basicTextColor;
 }

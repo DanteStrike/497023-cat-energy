@@ -1,9 +1,14 @@
 .request {
+  @include container;
   min-height: 1230px;
   margin-bottom: 27px;
 
   font-size: 16px;
   text-transform: uppercase;
+}
+
+.request__title {
+  @include visually-hidden;
 }
 
 .request__annotation {
@@ -21,6 +26,10 @@
   padding: 0;
 
   border: none;
+}
+
+.request__cat-title {
+  @include visually-hidden;
 }
 
 .request__cat-propertys {
@@ -48,7 +57,7 @@
   margin-right: 16px;
   padding: 0;
 
-  color: $color--nero;
+  color: rgb(34, 34, 34);
 
   sup {
     vertical-align: top;
@@ -62,10 +71,10 @@
   padding: 14px 15px;
 
   font: inherit;
-  color: $color--charcoal;
+  color: $basicTextColor;
   text-transform: uppercase;
 
-  border: 1px solid $color--gainsboro;
+  border: 1px solid rgb(230, 230, 230);
 }
 
 .request__goals {
@@ -75,6 +84,10 @@
   padding: 0;
 
   border: none;
+}
+
+.request__goals-title {
+  @include visually-hidden;
 }
 
 .request__goals-list {
@@ -93,6 +106,10 @@
 
   &:not(:last-child) {
     margin-bottom: 13px;
+  }
+
+  & input {
+    @include visually-hidden;
   }
 }
 
@@ -152,7 +169,7 @@
   padding: 16px 10px 16px 14px;
 
   font: inherit;
-  color: $color--charcoal;
+  color: $basicTextColor;
   text-transform: uppercase;
 
   resize: none;
@@ -193,6 +210,10 @@
 
   &:not(:last-child) {
     margin-bottom: 13px;
+  }
+
+  & input {
+    @include visually-hidden;
   }
 }
 
