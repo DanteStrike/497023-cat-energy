@@ -1,0 +1,23 @@
+.button {
+  display: block;
+  width: 280px;
+  min-height: 40px;
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  line-height: 40px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+
+  background-color: rgb(104, 183, 56);
+  border: none;
+  cursor: pointer;
+
+  &--gray {
+    color: $basicTextColor;
+
+    background-color: rgb(242, 242, 242);
+  }
+}

@@ -1,0 +1,56 @@
+.extra {
+  min-height: 129px;
+  padding-top: 13px;
+
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+.extra__link {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  color: inherit;
+}
+
+.extra__name {
+  display: block;
+  margin: 0;
+  margin-bottom: 13px;
+  padding: 0;
+  padding-left: 1px;
+
+  font: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.extra__property {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $arialFont;
+  color: $basicTextColor;
+}
+
+.extra__property-name {
+  margin: 0;
+  padding: 0;
+}
+
+.extra__property-value {
+  margin: 0;
+  padding: 0;
+}
+
+.extra__button {
+  margin-bottom: 17px;
+  padding-left: 1px;
+
+  font-size: 16px;
+}

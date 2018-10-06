@@ -1,0 +1,51 @@
+.contacts__title {
+  @include visually-hidden;
+}
+
+.contacts__wrap {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+
+  &--gray {
+    padding-top: 28px;
+
+    background-color: rgb(242, 242, 242);
+  }
+}
+
+.contacts__invitation {
+  width: 140px;
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  width: 140px;
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  line-height: 20px;
+  font-family: $arialFont;
+  color: $basicTextColor;
+}
+
+.contacts__map-wrap {
+  @include container;
+  padding: 0;
+}
+
+.contacts__map {
+  display: block;
+  width: 320px;
+  height: 360px;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,26 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 65px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  border-top: 1px solid rgb(217, 217, 217);
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+
+.social__item {
+  width: 50px;
+  height: 50px;
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+.social__link {
+  font-size: 0;
+}

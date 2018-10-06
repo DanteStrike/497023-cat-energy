@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -30,14 +31,13 @@
 
     <main class="main">
       <h1 class="main__title">Подбор программы</h1>
-
       <section class="request">
-        <h2 class="request__title visually-hidden">Заявка</h2>
+        <h2 class="request__title">Заявка</h2>
         <p class="request__annotation">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
         <form class="request__form" action="https://echo.htmlacademy.ru" method="GET">
           <fieldset class="request__cat">
-            <legend class="request__cat-title visually-hidden">О Коте</legend>
+            <legend class="request__cat-title">О Коте</legend>
             <ul class="request__cat-propertys">
               <li class="request__cat-property">
                 <label class="request__label label" for="request__cat-name">Имя:<sup>*</sup></label>
@@ -55,18 +55,18 @@
           </fieldset>
 
           <fieldset class="request__goals">
-            <legend class="request__goals-title visually-hidden">Цель</legend>
+            <legend class="request__goals-title">Цель</legend>
             <ul class="request__goals-list">
               <li class="request__goals-item">
-                <input class="visually-hidden" type="radio" name="goal" id="request__goals-loss" value="loss" checked>
+                <input type="radio" name="goal" id="request__goals-loss" value="loss" checked>
                 <label class="request__label label" for="request__goals-loss">Похудение</label>
               </li>
               <li class="request__goals-item">
-                <input class="visually-hidden" type="radio" name="goal" id="request__goals-mass" value="mass">
+                <input type="radio" name="goal" id="request__goals-mass" value="mass">
                 <label class="request__label label" for="request__goals-mass">Набор массы</label>
               </li>
               <li class="request__goals-item">
-                <input class="visually-hidden" type="radio" name="goal" id="request__goals-help" value="help">
+                <input type="radio" name="goal" id="request__goals-help" value="help">
                 <label class="request__label label" for="request__goals-help">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
@@ -88,32 +88,32 @@
 
           <div class="request__comment">
             <label class="request__comment-title" for="request__comment-text">Комментарий</label>
-            <textarea name="request__comment-text" id="request__comment-text" cols="33" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="request__comment-text" name="request__comment-text" id="request__comment-text" cols="40" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
 
           <fieldset class="request__additionally">
             <legend class="request__additionally-title">Дополнительно</legend>
             <ul class="request__additionally-list">
               <li class="request__additionally-item">
-                <input class="visually-hidden" type="checkbox" name="additionally" id="request__additionally-sweetener" value="sweetener" checked>
+                <input type="checkbox" name="additionally" id="request__additionally-sweetener" value="sweetener" checked>
                 <label class="request__label label" for="request__additionally-sweetener">Сахарозаменитель</label>
               </li>
               <li class="request__additionally-item">
-                <input class="visually-hidden" type="checkbox" name="additionally" id="request__additionally-water" value="water">
+                <input type="checkbox" name="additionally" id="request__additionally-water" value="water">
                 <label class="request__label label" for="request__additionally-water">Питьевая вода</label>
               </li>
               <li class="request__additionally-item">
-                <input class="visually-hidden" type="checkbox" name="additionally" id="request__additionally-milk" value="milk">
+                <input type="checkbox" name="additionally" id="request__additionally-milk" value="milk">
                 <label class="request__label label" for="request__additionally-milk">Молоко</label>
               </li>
               <li class="request__additionally-item">
-                <input class="visually-hidden" type="checkbox" name="additionally" id="request__additionally-vitamins" value="vitamins">
+                <input type="checkbox" name="additionally" id="request__additionally-vitamins" value="vitamins">
                 <label class="request__label label" for="request__additionally-vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
 
-          <button class="request__button" type="submit">Отправить заявку</button>
+          <button class="request__button button" type="submit">Отправить заявку</button>
           <small class="request__warning">
             <sup>*</sup> — Обязательные поля
           </small>
@@ -121,17 +121,19 @@
       </section>
 
       <section class="contacts">
-        <h2 class="contacts__title visually-hidden">Контакты</h2>
-        <div class="contacts__wrap">
-          <strong class="contacts__invitation">приглашаем к сотрудничеству дилеров!</strong>
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__wrap contacts__wrap--gray">
+          <strong class="contacts__invitation">приглашаем к&nbsp;сотрудничеству дилеров!</strong>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
-        <img class="contacts__map" src="http://placehold.it/320x360" alt="Карта проезда" width="320" height="360">
+        <div class="contacts__map-wrap">
+          <img class="contacts__map" src="http://placehold.it/320x360" alt="Карта проезда" width="320" height="360">
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <img class="footer__main-title main-title main-title--footer" src="http://placehold.it/100x18" alt="CAT ENERGY" width="101" height="18">
+      <img class="footer__main-title main-title main-title--footer" src="http://placehold.it/130x26" alt="CAT ENERGY" width="130" height="26">
       <ul class="footer__social social">
         <li class="social__item">
           <a href="#" class="social__link social__link--vk">VK</a>
