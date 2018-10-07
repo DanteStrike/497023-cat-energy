@@ -9,24 +9,23 @@
     <header class="header">
       <div class="header__wrap">
         <a href="index.html" class="header__logo">
-          <img class="header__logo-image" src="http://placehold.it/33x38" alt="Логотип Кэт энерджи" width="33" height="38">
+          <img class="header__logo-image" src="http://placehold.it/191x38" alt="Логотип Кэт энерджи" width="191" height="38">
         </a>
-        <img class="header__main-title main-title" src="http://placehold.it/100x18" alt="CAT ENERGY" width="100" height="18">
         <button class="header__button" type="button">Открыть меню</button>
+        <nav class="header__menu nav-main">
+          <ul class="nav-main__list">
+            <li class="nav-main__item">
+              <a href="index.html" class="nav-main__link">Главная</a>
+            </li>
+            <li class="nav-main__item nav-main__item--active">
+              <a class="nav-main__link">Каталог продукции</a>
+            </li>
+            <li class="nav-main__item">
+              <a href="form.html" class="nav-main__link">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="header__menu nav-main">
-        <ul class="nav-main__list">
-          <li class="nav-main__item">
-            <a href="index.html" class="nav-main__link">Главная</a>
-          </li>
-          <li class="nav-main__item nav-main__item--active">
-            <a class="nav-main__link">Каталог продукции</a>
-          </li>
-          <li class="nav-main__item">
-            <a href="form.html" class="nav-main__link">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="main">
@@ -230,65 +229,67 @@
         </div>
       </section>
 
-      <section class="extras">
-        <h2 class="extras__title">Дополнительные товары</h2>
-        <div class="extras__list">
-          <article class="extras__extra extra">
-            <a href="#" class="extra__link">
-              <h3 class="extra__name">Сахарозаменитель</h3>
-            </a>
-            <div class="extra__property">
-              <span class="extra__property-name">1 упаковка (100 г)</span>
-              <span class="extra__property-value">100 Р.</span>
-            </div>
-            <button class="extra__button button" type="button">Заказать</button>
-          </article>
-          <article class="extras__extra extra">
-            <a href="#" class="extra__link">
-              <h3 class="extra__name">Питьевая вода</h3>
-            </a>
-            <div class="extra__property">
-              <span class="extra__property-name">5 литров</span>
-              <span class="extra__property-value">50 Р.</span>
-            </div>
-            <button class="extra__button button" type="button">Заказать</button>
-          </article>
-          <article class="extras__extra extra">
-            <a href="#" class="extra__link">
-              <h3 class="extra__name">Молоко</h3>
-            </a>
-            <div class="extra__property">
-              <span class="extra__property-name">1 литр</span>
-              <span class="extra__property-value">100 Р.</span>
-            </div>
-            <button class="extra__button button" type="button">Заказать</button>
-          </article>
-          <article class="extras__extra extra">
-            <a href="#" class="extra__link">
-              <h3 class="extra__name">Витамины</h3>
-            </a>
-            <div class="extra__property">
-              <span class="extra__property-name">1 упаковка (30 г)</span>
-              <span class="extra__property-value">300 Р.</span>
-            </div>
-            <button class="extra__button button" type="button">Заказать</button>
-          </article>
-        </div>
-      </section>
+      <div class="main__wrap">
+        <section class="extras">
+          <h2 class="extras__title">Дополнительные товары</h2>
+          <div class="extras__list">
+            <article class="extras__extra extra">
+              <a href="#" class="extra__link">
+                <h3 class="extra__name">Сахарозаменитель</h3>
+              </a>
+              <div class="extra__property">
+                <span class="extra__property-name">1 упаковка (100 г)</span>
+                <span class="extra__property-value">100 Р.</span>
+              </div>
+              <button class="extra__button button" type="button">Заказать</button>
+            </article>
+            <article class="extras__extra extra">
+              <a href="#" class="extra__link">
+                <h3 class="extra__name">Питьевая вода</h3>
+              </a>
+              <div class="extra__property">
+                <span class="extra__property-name">5 литров</span>
+                <span class="extra__property-value">50 Р.</span>
+              </div>
+              <button class="extra__button button" type="button">Заказать</button>
+            </article>
+            <article class="extras__extra extra">
+              <a href="#" class="extra__link">
+                <h3 class="extra__name">Молоко</h3>
+              </a>
+              <div class="extra__property">
+                <span class="extra__property-name">1 литр</span>
+                <span class="extra__property-value">100 Р.</span>
+              </div>
+              <button class="extra__button button" type="button">Заказать</button>
+            </article>
+            <article class="extras__extra extra">
+              <a href="#" class="extra__link">
+                <h3 class="extra__name">Витамины</h3>
+              </a>
+              <div class="extra__property">
+                <span class="extra__property-name">1 упаковка (30 г)</span>
+                <span class="extra__property-value">300 Р.</span>
+              </div>
+              <button class="extra__button button" type="button">Заказать</button>
+            </article>
+          </div>
+        </section>
 
-      <section class="share">
-        <h2 class="share__title">Акция: Подарок</h2>
-        <p class="share__description">Закажите все и&nbsp;получите чехол&nbsp;для кота в подарок!</p>
-      </section>
+        <section class="share">
+          <h2 class="share__title">Акция: Подарок</h2>
+          <p class="share__description">Закажите все и&nbsp;получите чехол&nbsp;для кота в подарок!</p>
+        </section>
+      </div>
 
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
-        <div class="contacts__wrap contacts__wrap--gray">
+        <div class="contacts__wrap">
           <strong class="contacts__invitation">приглашаем к&nbsp;сотрудничеству дилеров!</strong>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__address-city">Санкт-Петербург</span></address>
         </div>
         <div class="contacts__map-wrap">
-          <img class="contacts__map" src="http://placehold.it/320x360" alt="Карта проезда" width="320" height="360">
+          <img class="contacts__map" src="./img/bg-map-tablet@1x.png" alt="Карта проезда" width="320" height="360">
         </div>
       </section>
     </main>

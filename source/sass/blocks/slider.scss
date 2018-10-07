@@ -35,3 +35,20 @@
   border: 0;
   cursor: pointer;
 }
+
+@media (min-width: $tablet) {
+  .slider {
+    min-height: 630px;
+
+    background-color: lightgrey;
+  }
+}
+
+@media (min-width: $desktop) {
+  .slider {
+    width: 610px;
+    min-height: 462px;
+
+    background-color: grey;
+  }
+}

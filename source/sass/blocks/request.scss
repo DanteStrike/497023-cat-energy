@@ -1,7 +1,7 @@
 .request {
   @include container;
-  min-height: 1230px;
-  margin-bottom: 27px;
+
+  margin-bottom: 105px;
 
   font-size: 16px;
   text-transform: uppercase;
@@ -13,16 +13,14 @@
 
 .request__annotation {
   width: 230px;
-  margin: 0;
-  margin-bottom: 38px;
+  margin: 0 0 38px 0;
   padding: 0;
 
   font-size: 14px;
 }
 
 .request__cat {
-  margin: 0;
-  margin-bottom: 44px;
+  margin: 0 0 44px 0;
   padding: 0;
 
   border: none;
@@ -53,8 +51,7 @@
 .request__label {
   display: block;
   flex-shrink: 0;
-  margin: auto 0;
-  margin-right: 16px;
+  margin: auto 16px auto 0;
   padding: 0;
 
   color: rgb(34, 34, 34);
@@ -79,8 +76,7 @@
 
 .request__goals {
   min-height: 115px;
-  margin: 0;
-  margin-bottom: 50px;
+  margin: 0 0 50px 0;
   padding: 0;
 
   border: none;
@@ -101,8 +97,7 @@
   display: flex;
   min-height: 30px;
   margin: 0;
-  padding: 0;
-  padding-left: 46px;
+  padding: 0 0 0 46px;
 
   &:not(:last-child) {
     margin-bottom: 13px;
@@ -114,8 +109,7 @@
 }
 
 .request__owner {
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   padding: 0;
 
   border: none;
@@ -123,8 +117,7 @@
 
 .request__owner-title {
   display: block;
-  margin: 0;
-  margin-bottom: 33px;
+  margin: 0 0 33px 0;
   padding: 0;
 
   font-size: 24px;
@@ -152,8 +145,7 @@
 
 .request__comment-title {
   display: block;
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   padding: 0;
 
   font-size: 24px;
@@ -184,8 +176,7 @@
 
 .request__additionally-title {
   display: block;
-  margin: 0;
-  margin-bottom: 32px;
+  margin: 0 0 32px 0;
   padding: 0;
 
   font-size: 24px;
@@ -194,8 +185,7 @@
 }
 
 .request__additionally-list {
-  margin: 0;
-  margin-bottom: 34px;
+  margin: 0 0 34px 0;
   padding: 0;
 
   list-style: none;
@@ -204,12 +194,11 @@
 .request__additionally-item {
   display: flex;
   min-height: 30px;
-  margin: 0;
-  padding: 0;
-  padding-left: 46px;
+  margin: 0 0 13px 0;
+  padding: 0 0 0 46px;
 
-  &:not(:last-child) {
-    margin-bottom: 13px;
+  &:last-child {
+    margin-bottom: 0;
   }
 
   & input {
@@ -234,5 +223,226 @@
 
   sup {
     vertical-align: top;
+  }
+}
+
+@media (min-width: $tablet) {
+  .request {
+    margin-bottom: 72px;
+    padding-right: 67px;
+    padding-left: 72px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .request__input {
+    min-height: 52px;
+    padding: 14px 20px;
+  }
+
+  .request__annotation {
+    width: 344px;
+    margin-bottom: 64px;
+    padding-top: 16px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .request__cat {
+    margin-bottom: 72px;
+  }
+
+  .request__cat-property {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .request__goals {
+    margin-bottom: 74px;
+  }
+
+  .request__goals-list {
+    min-height: 198px;
+    padding: 24px 27px 20px 27px;
+
+    border: 1px solid rgb(230, 230, 230);
+  }
+
+  .request__goals-item {
+    min-height: 40px;
+    padding-left: 60px;
+  }
+
+  .request__owner {
+    margin-bottom: 65px;
+  }
+
+  .request__owner-title {
+    margin-bottom: 76px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .request__owner-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .request__comment {
+    margin-bottom: 67px;
+  }
+
+  .request__comment-title {
+    margin-bottom: 74px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .request__comment-text {
+    width: 630px;
+    height: 174px;
+  }
+
+  .request__additionally-title {
+    margin-bottom: 56px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .request__additionally-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 22px;
+  }
+
+  .request__additionally-item {
+    width: 284px;
+    min-height: 40px;
+    margin-right: 60px;
+    margin-bottom: 32px;
+    padding-left: 60px;
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .request__button {
+    display: inline-block;
+    width: 284px;
+    min-height: 52px;
+    margin-right: 60px;
+    margin-bottom: 0;
+
+    vertical-align: baseline;
+  }
+
+  .request__warning {
+    display: inline-block;
+
+    font-size: 16px;
+    line-height: 16px;
+    vertical-align: baseline;
+  }
+}
+
+@media (min-width: $desktop) {
+  .request {
+    margin-bottom: 82px;
+    padding: 0 110px;
+  }
+
+  .request__annotation {
+    padding-top: 3px;
+  }
+
+  .request__cat {
+    display: inline-block;
+    width: 570px;
+    margin-right: 75px;
+    margin-bottom: 0;
+
+    vertical-align: top;
+  }
+
+  .request__goals {
+    display: inline-block;
+    width: 570px;
+    margin-bottom: 68px;
+
+    vertical-align: top;
+  }
+
+  .request__owner {
+    margin-bottom: 67px;
+  }
+
+  .request__owner-list {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .request__owner-item {
+    width: 570px;
+    margin-right: 80px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .request__comment {
+    margin-bottom: 69px;
+  }
+
+  .request__comment-title {
+    margin-bottom: 76px;
+  }
+
+  .request__comment-text {
+    width: 100%;
+  }
+
+  .request__additionally-item {
+    width: 245px;
+    margin-right: 80px;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
+
+    &:nth-of-type(2n) {
+      margin-right: 80px;
+    }
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+  }
+
+  .request__additionally-list {
+    margin-bottom: 28px;
+  }
+
+  .request__button {
+    width: 570px;
   }
 }

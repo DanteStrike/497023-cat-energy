@@ -1,6 +1,7 @@
 .extras {
-  @include container;
   margin-bottom: 39px;
+
+  @include container;
 }
 
 .extras__title {
@@ -12,6 +13,29 @@
   font: inherit;
   font-size: 24px;
   line-height: 24px;
+}
 
-  border-bottom: 1px solid rgb(205, 205, 205);
+@media (min-width: $tablet) {
+  .extras {
+    margin-bottom: 69px;
+  }
+  .extras__title {
+    margin-bottom: 58px;
+    padding-left: 38px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .extras {
+    width: 895px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .extras__title {
+    padding-left: 0;
+  }
 }

@@ -4,6 +4,7 @@
 
 .contacts__wrap {
   @include container;
+
   display: flex;
   justify-content: space-between;
   padding-bottom: 25px;
@@ -39,6 +40,7 @@
 
 .contacts__map-wrap {
   @include container;
+
   padding: 0;
 }
 
@@ -48,4 +50,72 @@
   height: 360px;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: $tablet) {
+  .contacts__wrap {
+    padding: 0 71px 57px 71px;
+  }
+
+  .contacts__invitation {
+    width: 200px;
+    padding-top: 2px;
+
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__address {
+    width: 160px;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .contacts__address-city {
+    display: block;
+    padding-top: 20px;
+  }
+
+  .contacts__map-wrap {
+    padding: 0;
+  }
+
+  .contacts__map {
+    width: 768px;
+    height: 396px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .contacts {
+    position: relative;
+
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .contacts__wrap {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    z-index: 99;
+
+    width: 570px;
+    height: 201px;
+    margin: 0;
+    padding: 63px 83px 0 77px;
+
+    background-color: rgb(255, 255, 255);
+  }
+
+  .contacts__address {
+    text-align: left;
+  }
+
+  .contacts__map {
+    width: 1440px;
+    height: 400px;
+  }
 }

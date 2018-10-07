@@ -24,3 +24,22 @@
 .social__link {
   font-size: 0;
 }
+
+@media (min-width: $tablet) {
+  .social {
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 30px;
+
+    border: none;
+  }
+
+  .social__item {
+    width: 30px;
+    height: 30px;
+
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+}

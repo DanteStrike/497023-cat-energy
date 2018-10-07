@@ -1,9 +1,10 @@
 .example {
-  @include container;
   margin-bottom: 28px;
   padding-top: 17px;
 
   background-color: rgb(242, 242, 242);
+
+  @include container;
 }
 
 .example__title {
@@ -17,7 +18,16 @@
   line-height: 60px;
 }
 
+.example__wrap-columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 17px;
+}
+
 .example__description {
+  width: 100%;
   margin: 0;
   margin-bottom: 24px;
   padding: 0;
@@ -26,43 +36,178 @@
   color: $basicTextColor;
 }
 
-.example__wrap-columns {
-  display: flex;
-  justify-content: space-between;
-  min-height: 75px;
-  margin-bottom: 17px;
+.example__wrap-column {
+  position: relative;
+
+  width: 124px;
+  height: 56px;
+  margin-bottom: 34px;
+
+  text-align: center;
+
+  border: 1px solid rgb(205, 205, 205);
+  border-radius: 3px;
+
+  &--left {
+    margin-right: 32px;
+  }
 }
 
 .example__value {
   display: block;
   margin: 0;
+  margin-top: 13px;
   padding: 0;
 
+  font: inherit;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
 }
 
-.example__wrap-column {
-  text-align: center;
-}
-
 .example__field {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+
   display: block;
+  width: 87px;
   margin: 0;
-  padding: 0;
+  margin-left: -43.5px;
+  padding: 0 15px;
 
   font-size: 12px;
   line-height: 12px;
   font-family: $arialFont;
+  color: $basicTextColor;
+
+  background-color: rgb(242, 242, 242);
 }
 
 .example__price {
+  width: 100%;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 19px;
   padding: 0;
 
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet) {
+  .example {
+    margin-bottom: 65px;
+
+    background-color: rgb(255, 255, 255);
+  }
+
+  .example__title {
+    margin-bottom: 64px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__wrap-columns {
+    margin-bottom: 52px;
+  }
+
+  .example__description {
+    margin-bottom: 53px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__wrap-column {
+    width: 162px;
+    height: 72px;
+
+    &--left {
+      margin-right: 42px;
+    }
+  }
+
+  .example__value {
+    margin-top: 15px;
+
+    font-size: 30px;
+    line-height: 37.02px;
+  }
+
+  .example__field {
+    bottom: -7px;
+
+    width: 140px;
+    margin-left: -70px;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: rgb(255, 255, 255);
+
+    &--weight {
+      width: 114px;
+      margin-left: -57px;
+    }
+  }
+
+  .example__price {
+    width: 180px;
+    margin-top: 6px;
+    margin-left: auto;
+
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+  }
+}
+
+@media (min-width: $desktop) {
+  .example {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .example__title {
+    width: 100%;
+    margin-bottom: 75px;
+  }
+
+  .example__wrap-columns {
+    width: 610px;
+    min-height: 462px;
+    margin-bottom: 0;
+    padding-top: 71px;
+    padding-right: 175px;
+
+    background-color: lightgrey;
+  }
+
+  .example__wrap-column {
+    margin-bottom: 56px;
+  }
+
+  .example__description {
+    margin-bottom: 67px;
+  }
+
+  .example__price {
+    width: 100%;
+    margin: 0;
+
+    text-align: left;
+  }
+
+  .example__result {
+    display: inline-block;
+    padding-left: 60px;
+
+    vertical-align: baseline;
+  }
 }

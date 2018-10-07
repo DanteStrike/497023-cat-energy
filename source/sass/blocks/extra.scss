@@ -3,6 +3,12 @@
   padding-top: 13px;
 
   border-bottom: 1px solid rgb(205, 205, 205);
+
+  &:first-child {
+    min-height: 130px;
+
+    border-top: 1px solid rgb(205, 205, 205);
+  }
 }
 
 .extra__link {
@@ -53,4 +59,84 @@
   padding-left: 1px;
 
   font-size: 16px;
+}
+
+@media (min-width: $tablet) {
+  .extra {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    min-height: 139px;
+    padding: 25px 37px 10px 37px;
+
+    border-right: 1px solid rgb(205, 205, 205);
+    border-left: 1px solid rgb(205, 205, 205);
+
+    &:first-child {
+      min-height: 140px;
+    }
+  }
+
+  .extra__name {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra__property {
+    width: 287px;
+    margin: 3px 0 22px auto;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .extra__property-name {
+    width: 162px;
+
+    text-align: right;
+  }
+
+  .extra__property-value {
+    width: 90px;
+    margin-left: auto;
+
+    text-align: right;
+  }
+
+  .extra__button {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop) {
+  .extra {
+    flex-wrap: nowrap;
+    align-items: center;
+    min-height: 72px;
+    padding: 0;
+
+    border-right: none;
+    border-left: none;
+
+    &:first-child {
+      min-height: 73px;
+    }
+  }
+
+  .extra__name {
+    width: 245px;
+    margin: 0;
+  }
+
+  .extra__property {
+    width: 285px;
+    margin: 0 0 0 80px;
+  }
+
+  .extra__button {
+    width: 245px;
+    margin-left: auto;
+  }
 }

@@ -1,10 +1,13 @@
 .main {
+  position: relative;
+
   margin: 0;
   padding: 0;
 }
 
 .main__title {
   @include container;
+
   display: block;
   min-height: 104px;
   padding-top: 15px;
@@ -13,4 +16,31 @@
   font-size: 36px;
   line-height: 60px;
   text-align: left;
+}
+
+@media (min-width: $tablet) {
+  .main__title {
+    min-height: 128px;
+    margin-bottom: 30px;
+    padding-top: 58px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .main__title {
+    min-height: 150px;
+    margin-bottom: 36px;
+    padding-top: 74px;
+  }
+
+  .main__wrap {
+    display: flex;
+    align-items: flex-start;
+    width: 1440px;
+    margin: 0 auto 86px auto;
+    padding: 0 110px;
+  }
 }

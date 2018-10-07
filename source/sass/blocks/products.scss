@@ -1,5 +1,6 @@
 .products {
   @include container;
+
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 28px;
@@ -13,16 +14,14 @@
 .products__more {
   width: 100%;
   min-height: 209px;
-  padding: 0 19px;
-  padding-top: 78px;
+  padding: 78px 19px 0 19px;
 
   border: 1px solid rgb(237, 237, 237);
 }
 
 .products__more-title {
   display: block;
-  margin: 0;
-  margin-bottom: 9px;
+  margin: 0 0 9px 0;
   padding: 0;
 
   font: inherit;
@@ -48,4 +47,33 @@
   padding-left: 1px;
 
   font-size: 16px;
+}
+
+@media (min-width: $tablet) {
+  .products {
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-top: 33px;
+  }
+
+  .products__more {
+    width: 324px;
+    min-height: 516px;
+
+    background-color: lightgray;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop) {
+  .products__more {
+    width: 245px;
+    height: 512px;
+  }
+
+  .products__button {
+    width: 170px;
+    min-height: 40px;
+  }
 }

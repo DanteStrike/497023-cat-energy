@@ -9,24 +9,23 @@
     <header class="header">
       <div class="header__wrap">
         <a href="index.html" class="header__logo">
-          <img class="header__logo-image" src="http://placehold.it/33x38" alt="Логотип Кэт энерджи" width="33" height="38">
+          <img class="header__logo-image" src="http://placehold.it/191x38" alt="Логотип Кэт энерджи" width="191" height="38">
         </a>
-        <img class="header__main-title main-title" src="http://placehold.it/100x18" alt="CAT ENERGY" width="100" height="18">
         <button class="header__button" type="button">Открыть меню</button>
+        <nav class="header__menu nav-main">
+          <ul class="nav-main__list">
+            <li class="nav-main__item">
+              <a href="index.html" class="nav-main__link">Главная</a>
+            </li>
+            <li class="nav-main__item">
+              <a href="catalog.html" class="nav-main__link">Каталог продукции</a>
+            </li>
+            <li class="nav-main__item nav-main__item--active">
+              <a class="nav-main__link">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="header__menu nav-main">
-        <ul class="nav-main__list">
-          <li class="nav-main__item">
-            <a href="index.html" class="nav-main__link">Главная</a>
-          </li>
-          <li class="nav-main__item nav-main__item--active">
-            <a href="catalog.html" class="nav-main__link">Каталог продукции</a>
-          </li>
-          <li class="nav-main__item nav-main__item--active">
-            <a class="nav-main__link">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="main">
@@ -88,7 +87,7 @@
 
           <div class="request__comment">
             <label class="request__comment-title" for="request__comment-text">Комментарий</label>
-            <textarea class="request__comment-text" name="request__comment-text" id="request__comment-text" cols="40" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="request__comment-text" name="request__comment-text" id="request__comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
 
           <fieldset class="request__additionally">
@@ -122,12 +121,12 @@
 
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
-        <div class="contacts__wrap contacts__wrap--gray">
+        <div class="contacts__wrap">
           <strong class="contacts__invitation">приглашаем к&nbsp;сотрудничеству дилеров!</strong>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__address-city">Санкт-Петербург</span></address>
         </div>
         <div class="contacts__map-wrap">
-          <img class="contacts__map" src="http://placehold.it/320x360" alt="Карта проезда" width="320" height="360">
+          <img class="contacts__map" src="./img/bg-map-tablet@1x.png" alt="Карта проезда" width="320" height="360">
         </div>
       </section>
     </main>
