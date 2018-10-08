@@ -1,7 +1,7 @@
 .extras {
-  margin-bottom: 39px;
-
   @include container;
+
+  margin-bottom: 39px;
 }
 
 .extras__title {
@@ -19,6 +19,7 @@
   .extras {
     margin-bottom: 69px;
   }
+
   .extras__title {
     margin-bottom: 58px;
     padding-left: 38px;
