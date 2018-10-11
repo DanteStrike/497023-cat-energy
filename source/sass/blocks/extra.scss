@@ -1,14 +1,8 @@
 .extra {
-  min-height: 129px;
   padding-top: 13px;
+  padding-bottom: 17px;
 
   border-bottom: 1px solid rgb(205, 205, 205);
-
-  &:first-child {
-    min-height: 130px;
-
-    border-top: 1px solid rgb(205, 205, 205);
-  }
 }
 
 .extra__link {
@@ -55,36 +49,32 @@
 }
 
 .extra__button {
-  margin-bottom: 17px;
   padding-left: 1px;
 
   font-size: 16px;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $tabletWidth) {
   .extra {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     align-items: flex-start;
-    min-height: 139px;
-    padding: 25px 37px 10px 37px;
+    padding: 25px 36px 28px 36px;
 
     border-right: 1px solid rgb(205, 205, 205);
     border-left: 1px solid rgb(205, 205, 205);
-
-    &:first-child {
-      min-height: 140px;
-    }
   }
 
   .extra__name {
+    padding-left: 2px;
+
     font-size: 20px;
     line-height: 20px;
   }
 
   .extra__property {
-    width: 287px;
+    width: 249px;
     margin: 3px 0 22px auto;
 
     font-size: 16px;
@@ -92,25 +82,28 @@
   }
 
   .extra__property-name {
-    width: 162px;
+    width: 154px;
+    padding-left: 10px;
 
     text-align: right;
   }
 
   .extra__property-value {
-    width: 90px;
+    width: 95px;
     margin-left: auto;
+    padding-left: 10px;
 
     text-align: right;
   }
 
   .extra__button {
     width: 100%;
-    margin: 0;
+    margin: 0 0 0 1px;
+    padding-left: 0;
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $desktopWidth) {
   .extra {
     flex-wrap: nowrap;
     align-items: center;
@@ -119,10 +112,6 @@
 
     border-right: none;
     border-left: none;
-
-    &:first-child {
-      min-height: 73px;
-    }
   }
 
   .extra__name {
@@ -131,8 +120,23 @@
   }
 
   .extra__property {
-    width: 285px;
-    margin: 0 0 0 80px;
+    width: 288px;
+    margin: 10px 0 0 80px;
+  }
+
+  .extra__property-name {
+    width: 190px;
+    padding-right: 10px;
+    padding-left: 0;
+
+    text-align: left;
+  }
+
+  .extra__property-value {
+    width: 45px;
+    padding-left: 0;
+
+    text-align: left;
   }
 
   .extra__button {

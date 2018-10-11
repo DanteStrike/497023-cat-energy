@@ -1,9 +1,11 @@
 .footer {
+  background-color: rgb(242, 242, 242);
+}
+
+.footer__container {
   @include container;
 
   padding-top: 40px;
-
-  background-color: rgb(242, 242, 242);
 }
 
 .footer__main-title {
@@ -35,8 +37,8 @@
   font-size: 0;
 }
 
-@media (min-width: $tablet) {
-  .footer {
+@media (min-width: $tabletWidth) {
+  .footer__container {
     display: flex;
     justify-content: space-between;
     padding-top: 58px;

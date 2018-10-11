@@ -1,10 +1,15 @@
 .example {
+  position: relative;
+
   margin-bottom: 28px;
   padding-top: 17px;
+  padding-bottom: 18px;
+}
 
-  background-color: rgb(242, 242, 242);
-
+.example__container {
   @include container;
+
+  position: relative;
 }
 
 .example__title {
@@ -67,13 +72,13 @@
 
 .example__field {
   position: absolute;
+  right: 0;
   bottom: -16px;
-  left: 50%;
+  left: 0;
 
   display: block;
   width: 87px;
-  margin: 0;
-  margin-left: -43.5px;
+  margin: auto;
   padding: 0 15px;
 
   font-size: 12px;
@@ -95,11 +100,23 @@
   text-transform: uppercase;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $tabletWidth) {
   .example {
-    margin-bottom: 65px;
+    margin-bottom: 63px;
+    padding-bottom: 0;
 
-    background-color: rgb(255, 255, 255);
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      display: block;
+      width: 100%;
+      height: 462px;
+
+      background: linear-gradient(to right, rgb(242, 242, 242) 50%, rgb(234, 234, 234) 50%);
+    }
   }
 
   .example__title {
@@ -110,7 +127,7 @@
   }
 
   .example__wrap-columns {
-    margin-bottom: 52px;
+    margin-bottom: 221px;
   }
 
   .example__description {
@@ -140,7 +157,6 @@
     bottom: -7px;
 
     width: 140px;
-    margin-left: -70px;
     padding: 0;
 
     font-size: 14px;
@@ -150,7 +166,6 @@
 
     &--weight {
       width: 114px;
-      margin-left: -57px;
     }
   }
 
@@ -165,13 +180,24 @@
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $desktopWidth) {
   .example {
+    margin-bottom: 0;
+
+    background-color: transparent;
+
+    &::before {
+      width: 100%;
+
+      background: linear-gradient(to right, rgb(242, 242, 242) 74%, rgb(234, 234, 234) 26%);
+    }
+  }
+
+  .example__container {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 0;
   }
 
   .example__title {
@@ -181,16 +207,16 @@
 
   .example__wrap-columns {
     width: 610px;
-    min-height: 462px;
     margin-bottom: 0;
-    padding-top: 71px;
-    padding-right: 175px;
-
-    background-color: lightgrey;
+    padding: 71px 175px 70px 0;
   }
 
   .example__wrap-column {
     margin-bottom: 56px;
+  }
+
+  .example__field {
+    background-color: rgb(242, 242, 242);
   }
 
   .example__description {

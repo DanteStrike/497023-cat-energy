@@ -2,9 +2,8 @@
   @include container;
 
   width: 280px;
-  min-height: 289px;
   margin-bottom: 35px;
-  padding: 186px 0 0 0;
+  padding: 187px 10px 42px 10px;
 
   color: rgb(255, 255, 255);
 
@@ -29,17 +28,17 @@
   text-align: center;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $tabletWidth) {
   .share {
     width: 708px;
     min-height: 200px;
-    margin-bottom: 138px;
-    padding: 70px 0 10px 0;
+    margin-bottom: 76px;
+    padding: 71px 0 69px 0;
   }
 
   .share__description {
     width: 165px;
-    margin-right: 124px;
+    margin-right: 120px;
     margin-left: auto;
 
     font-size: 16px;
@@ -48,12 +47,11 @@
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $desktopWidth) {
   .share {
     width: 245px;
-    min-height: 290px;
-    margin: 115px 0 0 auto;
-    padding: 186px 0 0 0;
+    margin: 116px 0 0 auto;
+    padding: 188px 10px 42px 10px;
   }
 
   .share__description {

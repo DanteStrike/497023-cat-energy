@@ -1,7 +1,7 @@
 .request {
   @include container;
 
-  margin-bottom: 105px;
+  margin-bottom: 31px;
 
   font-size: 16px;
   text-transform: uppercase;
@@ -140,12 +140,12 @@
 }
 
 .request__comment {
-  margin-bottom: 33px;
+  margin-bottom: 28px;
 }
 
 .request__comment-title {
   display: block;
-  margin: 0 0 30px 0;
+  margin: 0 0 34px 0;
   padding: 0;
 
   font-size: 24px;
@@ -163,6 +163,8 @@
   font: inherit;
   color: $basicTextColor;
   text-transform: uppercase;
+
+  border: 1px solid rgb(230, 230, 230);
 
   resize: none;
 }
@@ -226,9 +228,9 @@
   }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $tabletWidth) {
   .request {
-    margin-bottom: 72px;
+    margin-bottom: 73px;
     padding-right: 67px;
     padding-left: 72px;
 
@@ -243,8 +245,7 @@
 
   .request__annotation {
     width: 344px;
-    margin-bottom: 64px;
-    padding-top: 16px;
+    margin-bottom: 65px;
 
     font-size: 20px;
     line-height: 30px;
@@ -359,9 +360,9 @@
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $desktopWidth) {
   .request {
-    margin-bottom: 82px;
+    margin-bottom: 81px;
     padding: 0 110px;
   }
 

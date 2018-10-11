@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -36,7 +37,7 @@
         <article class="products__product product">
           <div class="product__wrap">
             <a href="#" class="product__link">
-              <img class="product__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="140" height="144">
+              <img class="product__image" src="./img/chicken-small-desktop@1x.png" alt="Cat Energy PRO 500 г" width="140" height="144">
             </a>
             <div class="product__description">
               <a href="#" class="product__link">
@@ -63,7 +64,7 @@
         <article class="products__product product">
           <div class="product__wrap">
             <a href="#" class="product__link">
-              <img class="product__image" src="./img/chicken-big-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="140" height="144">
+              <img class="product__image" src="./img/chicken-big-desktop@1x.png" alt="Cat Energy PRO 500 г" width="140" height="144">
             </a>
             <div class="product__description">
               <a href="#" class="product__link">
@@ -90,7 +91,7 @@
         <article class="products__product product">
           <div class="product__wrap">
             <a href="#" class="product__link">
-              <img class="product__image" src="./img/fish-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="140" height="144">
+              <img class="product__image" src="./img/fish-small-desktop@1x.png" alt="Cat Energy PRO 500 г" width="140" height="144">
             </a>
             <div class="product__description">
               <a href="#" class="product__link">
@@ -117,7 +118,7 @@
         <article class="products__product product">
           <div class="product__wrap">
             <a href="#" class="product__link">
-              <img class="product__image" src="./img/fish-big-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="140" height="144">
+              <img class="product__image" src="./img/fish-big-desktop@1x.png" alt="Cat Energy PRO 500 г" width="140" height="144">
             </a>
             <div class="product__description">
               <a href="#" class="product__link">
@@ -144,7 +145,7 @@
         <article class="products__product product">
           <div class="product__wrap">
             <a href="#" class="product__link">
-              <img class="product__image" src="./img/buckwheat-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="140" height="144">
+              <img class="product__image" src="./img/buckwheat-small-desktop@1x.png" alt="Cat Energy PRO 500 г" width="140" height="144">
             </a>
             <div class="product__description">
               <a href="#" class="product__link">
@@ -171,7 +172,7 @@
         <article class="products__product product">
           <div class="product__wrap">
             <a href="#" class="product__link">
-              <img class="product__image" src="./img/buckwheat-big-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="140" height="144">
+              <img class="product__image" src="./img/buckwheat-big-desktop@1x.png" alt="Cat Energy PRO 500 г" width="140" height="144">
             </a>
             <div class="product__description">
               <a href="#" class="product__link">
@@ -198,7 +199,7 @@
         <article class="products__product product">
           <div class="product__wrap">
             <a href="#" class="product__link">
-              <img class="product__image" src="./img/rice-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="140" height="144">
+              <img class="product__image" src="./img/rice-small-desktop@1x.png" alt="Cat Energy PRO 500 г" width="140" height="144">
             </a>
             <div class="product__description">
               <a href="#" class="product__link">
@@ -282,34 +283,39 @@
         </section>
       </div>
 
-      <section class="contacts">
+      <section class="contacts contacts--gray">
         <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__wrap">
-          <strong class="contacts__invitation">приглашаем к&nbsp;сотрудничеству дилеров!</strong>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__address-city">Санкт-Петербург</span></address>
+          <div class="contacts__info">
+            <strong class="contacts__invitation">приглашаем к&nbsp;сотрудничеству дилеров!</strong>
+            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__address-city">Санкт-Петербург</span></address>
+          </div>
         </div>
         <div class="contacts__map-wrap">
-          <img class="contacts__map" src="./img/bg-map-tablet@1x.png" alt="Карта проезда" width="320" height="360">
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858716279457!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1539247021240"
+            width="320" height="362" frameborder="0" allowfullscreen></iframe>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <img class="footer__main-title main-title main-title--footer" src="http://placehold.it/130x26" alt="CAT ENERGY" width="130" height="26">
-      <ul class="footer__social social">
-        <li class="social__item">
-          <a href="#" class="social__link social__link--vk">VK</a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--inst">Instagram</a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--fb">FaceBook</a>
-        </li>
-      </ul>
-      <div class="footer__copyright">
-        <span class="footer__copyright-text">HTML Academy</span>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link">HTML Academy logo</a>
+      <div class="footer__container">
+        <img class="footer__main-title main-title main-title--footer" src="http://placehold.it/130x26" alt="CAT ENERGY" width="130" height="26">
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a href="#" class="social__link social__link--vk">VK</a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--inst">Instagram</a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--fb">FaceBook</a>
+          </li>
+        </ul>
+        <div class="footer__copyright">
+          <span class="footer__copyright-text">HTML Academy</span>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link">HTML Academy logo</a>
+        </div>
       </div>
     </footer>
   </body>

@@ -51,7 +51,7 @@
   border: 0;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $tabletWidth) {
   .header {
     padding-top: 24px;
 
@@ -86,7 +86,7 @@
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $desktopWidth) {
   .header {
     padding-top: 54px;
 
