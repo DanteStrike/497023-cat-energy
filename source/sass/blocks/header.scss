@@ -18,7 +18,7 @@
       background-color: $basicThemeColor;
       background-image: url("../img/index-background-mobile@1x.jpg");
       background-repeat: no-repeat;
-      background-size: 100% auto;
+      background-size: cover;
     }
   }
 }
@@ -38,6 +38,14 @@
   height: 38px;
   margin: 0 0 16px 20px;
   padding: 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .header__button {
@@ -48,7 +56,15 @@
 
   font-size: 0;
 
+  background-color: rgb(255, 255, 255);
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 0;
+
+  &--menu {
+    background-image: url("../img/icon-mobile-menu.svg");
+  }
 }
 
 @media (min-width: $tabletWidth) {
@@ -93,7 +109,7 @@
     &--bg-cat {
       &::before {
         top: 0;
-        right: 0;
+        right: 1px;
 
         display: block;
         width: 50%;
@@ -105,7 +121,7 @@
   }
 
   .header__logo-image {
-    width: 245px;
+    width: 202px;
     height: 60px;
   }
 

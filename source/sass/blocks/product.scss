@@ -76,7 +76,7 @@
 }
 
 .product__button {
-  padding-left: 2px;
+  padding-left: 3px;
 
   font-size: 16px;
 }
@@ -118,19 +118,19 @@
 
   .product__wrap > .product__link {
     display: flex;
+    align-items: flex-end;
     height: 208px;
   }
 
   .product__image {
     width: 100%;
     height: auto;
-    margin-top: auto;
   }
 
   .product__description {
     width: 250px;
     margin: 0 auto;
-    padding: 38px 0 32px 1px;
+    padding: 37px 0 33px 1px;
   }
 
   .product__name {
@@ -153,6 +153,18 @@
     height: 32px;
 
     border-bottom: 1px solid rgb(205, 205, 205);
+  }
+
+  .product__property-name {
+    padding-top: 2px;
+
+    vertical-align: middle;
+  }
+
+  .product__property-value {
+    padding-top: 2px;
+
+    vertical-align: middle;
   }
 
   .product__button {
@@ -195,6 +207,6 @@
 
   .product__property-value {
     padding-top: 2px;
-    padding-right: 2px;
+    padding-right: 1px;
   }
 }

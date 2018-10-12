@@ -46,10 +46,12 @@
 .extra__property-value {
   margin: 0;
   padding: 0;
+
+  transform: translateX(2px);
 }
 
 .extra__button {
-  padding-left: 1px;
+  padding-left: 3px;
 
   font-size: 16px;
 }
@@ -94,6 +96,8 @@
     padding-left: 10px;
 
     text-align: right;
+
+    transform: none;
   }
 
   .extra__button {
@@ -108,7 +112,7 @@
     flex-wrap: nowrap;
     align-items: center;
     min-height: 72px;
-    padding: 0;
+    padding: 0 0 1px 0;
 
     border-right: none;
     border-left: none;
@@ -120,8 +124,8 @@
   }
 
   .extra__property {
-    width: 288px;
-    margin: 10px 0 0 80px;
+    width: 290px;
+    margin: 8px 0 0 80px;
   }
 
   .extra__property-name {
@@ -142,5 +146,6 @@
   .extra__button {
     width: 245px;
     margin-left: auto;
+    padding-left: 2px;
   }
 }

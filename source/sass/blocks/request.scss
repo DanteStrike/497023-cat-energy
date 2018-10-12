@@ -1,7 +1,7 @@
 .request {
   @include container;
 
-  margin-bottom: 31px;
+  margin-bottom: 32px;
 
   font-size: 16px;
   text-transform: uppercase;
@@ -13,14 +13,14 @@
 
 .request__annotation {
   width: 230px;
-  margin: 0 0 38px 0;
-  padding: 0;
+  margin: 0 0 39px 0;
+  padding: 0 0 0 1px;
 
   font-size: 14px;
 }
 
 .request__cat {
-  margin: 0 0 44px 0;
+  margin: 0 0 23px 0;
   padding: 0;
 
   border: none;
@@ -52,34 +52,101 @@
   display: block;
   flex-shrink: 0;
   margin: auto 16px auto 0;
-  padding: 0;
+  padding: 0 0 1px 0;
 
   color: rgb(34, 34, 34);
 
-  sup {
+  & sup {
     vertical-align: top;
   }
 }
 
 .request__input {
+  position: relative;
+  z-index: 10;
+
   flex-grow: 1;
+  //Fix Chrome bug
+  min-width: 0;
   height: 45px;
   margin: 0;
-  padding: 14px 15px;
+  padding: 14px 40px 14px 15px;
 
   font: inherit;
   color: $basicTextColor;
   text-transform: uppercase;
 
+  background-color: transparent;
   border: 1px solid rgb(230, 230, 230);
+
+  &:hover {
+    border-color: rgb(205, 205, 205);
+  }
+
+  &:active,
+  &:focus {
+    border-color: transparent;
+    outline: 0;
+    box-shadow: inset 0 0 0 2px rgba(68, 68, 68, 1);
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: transparent;
+    outline: 0;
+    box-shadow: inset 0 0 0 2px rgba(255, 130, 130, 1);
+  }
+
+  &:active ~ svg,
+  &:focus ~ svg {
+    color: $basicThemeColor;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) ~ svg {
+    color: rgba(255, 130, 130, 1);
+  }
+}
+
+.request__input-icon {
+  position: absolute;
+  z-index: 1;
+
+  &--email {
+    top: 16px;
+    right: 16px;
+
+    width: 17px;
+    height: 13px;
+  }
+
+  &--tel {
+    top: 13px;
+    right: 13px;
+
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .request__goals {
-  min-height: 115px;
-  margin: 0 0 50px 0;
-  padding: 0;
+  position: relative;
+
+  margin: 0 0 28px 0;
+  padding: 21px 10px 21px 0;
 
   border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+
+    display: block;
+    width: 320px;
+    height: 100%;
+
+    border: 1px solid rgb(237, 237, 237);
+  }
 }
 
 .request__goals-title {
@@ -94,10 +161,8 @@
 }
 
 .request__goals-item {
-  display: flex;
-  min-height: 30px;
+  display: block;
   margin: 0;
-  padding: 0 0 0 46px;
 
   &:not(:last-child) {
     margin-bottom: 13px;
@@ -106,18 +171,74 @@
   & input {
     @include visually-hidden;
   }
+
+  & label {
+    position: relative;
+
+    margin: 0;
+    padding: 6px 10px 6px 46px;
+
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: block;
+      width: 30px;
+      height: 30px;
+
+      border: 1px solid rgb(205, 205, 205);
+      border-radius: 50%;
+    }
+
+    &:hover::before {
+      border-color: rgb(186, 186, 186);
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  & input:checked ~ label {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 9px;
+
+      display: block;
+      width: 12px;
+      height: 12px;
+
+      background-color: $basicThemeColor;
+      border-radius: 50%;
+    }
+  }
+
+  & input:disabled ~ label {
+    opacity: 0.2;
+
+    pointer-events: none;
+  }
 }
 
 .request__owner {
-  margin: 0 0 30px 0;
+  margin: 0 0 28px 0;
   padding: 0;
 
   border: none;
 }
 
 .request__owner-title {
+  @include greenLineBoth(14px, 26px, 16px);
+
   display: block;
-  margin: 0 0 33px 0;
+  width: 185px;
+  margin: 0 0 34px 0;
   padding: 0;
 
   font-size: 24px;
@@ -132,10 +253,16 @@
 }
 
 .request__owner-item {
+  position: relative;
+
   display: flex;
 
   &:not(:last-child) {
     margin-bottom: 14px;
+  }
+
+  & label {
+    margin-right: 12px;
   }
 }
 
@@ -144,8 +271,11 @@
 }
 
 .request__comment-title {
+  @include greenLineBoth(14px, 26px, 2px);
+
   display: block;
-  margin: 0 0 34px 0;
+  width: 140px;
+  margin: 0 0 35px 0;
   padding: 0;
 
   font-size: 24px;
@@ -158,7 +288,7 @@
   width: 280px;
   height: 150px;
   margin: 0;
-  padding: 16px 10px 16px 14px;
+  padding: 12px 10px 12px 15px;
 
   font: inherit;
   color: $basicTextColor;
@@ -167,6 +297,23 @@
   border: 1px solid rgb(230, 230, 230);
 
   resize: none;
+
+  &:hover {
+    border-color: rgb(205, 205, 205);
+  }
+
+  &:active,
+  &:focus {
+    border-color: transparent;
+    outline: 0;
+    box-shadow: inset 0 0 0 2px rgba(68, 68, 68, 1);
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: transparent;
+    outline: 0;
+    box-shadow: inset 0 0 0 2px rgba(255, 130, 130, 1);
+  }
 }
 
 .request__additionally {
@@ -177,8 +324,11 @@
 }
 
 .request__additionally-title {
+  @include greenLineBoth(14px, 26px, 14px);
+
   display: block;
-  margin: 0 0 32px 0;
+  width: 150px;
+  margin: 0 0 35px 0;
   padding: 0;
 
   font-size: 24px;
@@ -187,17 +337,16 @@
 }
 
 .request__additionally-list {
-  margin: 0 0 34px 0;
+  margin: 0 0 35px 0;
   padding: 0;
 
   list-style: none;
 }
 
 .request__additionally-item {
-  display: flex;
-  min-height: 30px;
-  margin: 0 0 13px 0;
-  padding: 0 0 0 46px;
+  display: block;
+  margin: 0 0 12px 0;
+  padding: 0;
 
   &:last-child {
     margin-bottom: 0;
@@ -206,10 +355,63 @@
   & input {
     @include visually-hidden;
   }
+
+  & label {
+    position: relative;
+
+    padding: 6px 10px 6px 46px;
+
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: block;
+      width: 30px;
+      height: 30px;
+
+      border: 1px solid rgb(205, 205, 205);
+    }
+
+    &:hover::before {
+      border-color: rgb(186, 186, 186);
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  & input:checked ~ label {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 5px;
+
+      display: block;
+      width: 21px;
+      height: 16px;
+
+      background-image: url("../img/icon-tick.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  & input:disabled ~ label {
+    opacity: 0.2;
+
+    pointer-events: none;
+  }
 }
 
 .request__button {
-  margin-bottom: 22px;
+  margin-bottom: 21px;
+  padding-left: 3px;
 }
 
 .request__warning {
@@ -230,9 +432,9 @@
 
 @media (min-width: $tabletWidth) {
   .request {
-    margin-bottom: 73px;
+    margin-bottom: 72px;
     padding-right: 67px;
-    padding-left: 72px;
+    padding-left: 70px;
 
     font-size: 20px;
     line-height: 20px;
@@ -240,12 +442,12 @@
 
   .request__input {
     min-height: 52px;
-    padding: 14px 20px;
+    padding: 14px 18px;
   }
 
   .request__annotation {
     width: 344px;
-    margin-bottom: 65px;
+    margin-bottom: 66px;
 
     font-size: 20px;
     line-height: 30px;
@@ -253,6 +455,7 @@
 
   .request__cat {
     margin-bottom: 72px;
+    padding: 0 0 0 2px;
   }
 
   .request__cat-property {
@@ -261,20 +464,45 @@
     }
   }
 
+  .request__label {
+    margin: auto 18px auto 0;
+  }
+
   .request__goals {
-    margin-bottom: 74px;
+    margin-bottom: 75px;
+    padding: 0;
+
+    &::before {
+      content: none;
+    }
   }
 
   .request__goals-list {
-    min-height: 198px;
-    padding: 24px 27px 20px 27px;
+    min-height: 196px;
+    padding: 24px 28px 24px 28px;
 
     border: 1px solid rgb(230, 230, 230);
   }
 
   .request__goals-item {
-    min-height: 40px;
-    padding-left: 60px;
+    & label {
+      padding: 10px 10px 10px 60px;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    & input:checked ~ label {
+      &::after {
+        top: 11px;
+        left: 11px;
+
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
 
   .request__owner {
@@ -282,6 +510,9 @@
   }
 
   .request__owner-title {
+    @include greenLineBoth(22px, 40px, 17px);
+
+    width: 536px;
     margin-bottom: 76px;
 
     font-size: 36px;
@@ -292,26 +523,53 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+
+    &:first-child label {
+      padding-left: 2px;
+    }
+
+    & label {
+      margin-right: 19px;
+    }
+  }
+
+  .request__input-icon {
+    &--email {
+      top: 20px;
+      right: 19px;
+    }
+
+    &--tel {
+      top: 17px;
+      right: 16px;
+    }
   }
 
   .request__comment {
-    margin-bottom: 67px;
+    margin-bottom: 65px;
   }
 
   .request__comment-title {
-    margin-bottom: 74px;
+    @include greenLineBoth(22px, 40px, 19px);
+
+    width: 200px;
+    margin-bottom: 76px;
 
     font-size: 36px;
     line-height: 36px;
   }
 
   .request__comment-text {
-    width: 630px;
+    width: 631px;
     height: 174px;
+    padding: 14px 19px;
   }
 
   .request__additionally-title {
-    margin-bottom: 56px;
+    @include greenLineBoth(22px, 40px, 32px);
+
+    width: 220px;
+    margin-bottom: 57px;
 
     font-size: 36px;
     line-height: 36px;
@@ -330,7 +588,6 @@
     min-height: 40px;
     margin-right: 60px;
     margin-bottom: 32px;
-    padding-left: 60px;
 
     &:last-child {
       margin-bottom: 32px;
@@ -339,35 +596,66 @@
     &:nth-of-type(2n) {
       margin-right: 0;
     }
+
+    & label {
+      padding: 10px 10px 10px 59px;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    & input:checked ~ label {
+      &::after {
+        top: 12px;
+        left: 10px;
+
+        width: 21px;
+        height: 16px;
+      }
+    }
   }
 
   .request__button {
     display: inline-block;
     width: 284px;
     min-height: 52px;
-    margin-right: 60px;
+    margin-right: 58px;
     margin-bottom: 0;
+    padding-left: 0;
 
     vertical-align: baseline;
   }
 
   .request__warning {
     display: inline-block;
+    padding-top: 16px;
 
     font-size: 16px;
     line-height: 16px;
-    vertical-align: baseline;
+    vertical-align: top;
   }
 }
 
 @media (min-width: $desktopWidth) {
   .request {
-    margin-bottom: 81px;
+    margin-bottom: 82px;
     padding: 0 110px;
   }
 
   .request__annotation {
     padding-top: 3px;
+  }
+
+  .request__input-icon {
+    &--email {
+      right: 20px;
+    }
+
+    &--tel {
+      right: 19px;
+    }
   }
 
   .request__cat {
@@ -382,7 +670,7 @@
   .request__goals {
     display: inline-block;
     width: 570px;
-    margin-bottom: 68px;
+    margin-bottom: 69px;
 
     vertical-align: top;
   }
@@ -410,7 +698,7 @@
   }
 
   .request__comment {
-    margin-bottom: 69px;
+    margin-bottom: 67px;
   }
 
   .request__comment-title {
@@ -440,10 +728,11 @@
   }
 
   .request__additionally-list {
-    margin-bottom: 28px;
+    margin-bottom: 29px;
   }
 
   .request__button {
     width: 570px;
+    margin-right: 78px;
   }
 }

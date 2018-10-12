@@ -2,7 +2,7 @@
   position: relative;
 
   height: 240px;
-  margin: 0 0 32px 0;
+  margin: 0 0 34px 0;
   padding: 0;
 
   list-style: none;
@@ -10,8 +10,6 @@
 
 .slider__item {
   position: absolute;
-  top: 0;
-  left: 0;
   z-index: -1;
 
   width: 100%;
@@ -19,13 +17,20 @@
   padding: 0;
 
   &--before {
+    top: 0;
+    left: 0;
     z-index: 10;
+  }
+
+  &--after {
+    top: 0;
+    right: 0;
   }
 }
 
 .slider__item-image {
   display: block;
-  width: 315px;
+  width: 320px;
   height: 240px;
   margin: 0 auto;
   padding: 0;
@@ -60,6 +65,7 @@
   margin: 0 18px;
   padding: 3px 5px;
 
+  background-color: rgb(255, 255, 255);
   border: 1px solid rgb(205, 205, 205);
   border-radius: 6px;
 }
@@ -87,17 +93,41 @@
 
   .slider__list {
     height: 348px;
+    margin: 0 2px 0 16px;
     margin-bottom: 13px;
   }
 
   .slider__item {
-    top: -169px;
+    top: auto;
+    bottom: 0;
+    z-index: 10;
+
+    height: 517px;
+    overflow: hidden;
+
+    &--before {
+      width: 338px;
+    }
+
+    &--after {
+      width: 352px;
+    }
+  }
+
+  .slider__item--before img {
+    left: 0;
+  }
+
+  .slider__item--after img {
+    right: 0;
   }
 
   .slider__item-image {
-    width: 690px;
-    height: 517px;
-    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+
+    min-width: 690px;
+    height: inherit;
   }
 
   .slider__toogles {
@@ -131,6 +161,7 @@
     margin-left: 8px;
     padding: 14px 17px;
 
+    background-color: transparent;
     border: 0;
 
     &::before {
@@ -195,25 +226,34 @@
 
 @media (min-width: $desktopWidth) {
   .slider {
-    width: 570px;
+    width: 650px;
     margin-left: 40px;
   }
 
   .slider__list {
     height: 327px;
-    margin-bottom: 34px;
-  }
-
-  .slider__item-image {
-    margin: 0;
+    margin: 0 0 34px 0;
   }
 
   .slider__item {
-    top: -190px;
-    left: -80px;
+    &--before {
+      left: -13px;
+    }
+
+    &--after {
+      right: -27px;
+    }
+  }
+
+  .slider__item--before img {
+    left: -27px;
+  }
+
+  .slider__item--after img {
+    right: 27px;
   }
 
   .slider__toogles {
-    padding-left: 0;
+    padding-left: 40px;
   }
 }
