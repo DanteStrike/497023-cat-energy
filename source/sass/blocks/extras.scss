@@ -1,17 +1,45 @@
 .extras {
   @include container;
+
   margin-bottom: 39px;
 }
 
 .extras__title {
   display: block;
-  min-height: 59px;
   margin: 0;
-  padding: 0;
+  padding: 0 0 34px 0;
 
   font: inherit;
   font-size: 24px;
   line-height: 24px;
+}
 
-  border-bottom: 1px solid rgb(205, 205, 205);
+.extras__list {
+  border-top: 1px solid rgb(205, 205, 205);
+}
+
+@media (min-width: $tabletWidth) {
+  .extras {
+    margin-bottom: 68px;
+  }
+
+  .extras__title {
+    margin-bottom: 46px;
+    padding-left: 38px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .extras {
+    width: 895px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .extras__title {
+    padding-left: 0;
+  }
 }

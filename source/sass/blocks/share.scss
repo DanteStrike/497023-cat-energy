@@ -1,14 +1,13 @@
 .share {
   @include container;
+
   width: 280px;
-  min-height: 289px;
   margin-bottom: 35px;
-  padding: 0;
-  padding-top: 186px;
+  padding: 187px 10px 42px 10px;
 
   color: rgb(255, 255, 255);
 
-  background-color: rgb(104, 183, 56);
+  background-color: $basicThemeColor;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -27,4 +26,37 @@
   line-height: 20px;
   font-family: $arialFont;
   text-align: center;
+}
+
+@media (min-width: $tabletWidth) {
+  .share {
+    width: 708px;
+    min-height: 200px;
+    margin-bottom: 76px;
+    padding: 71px 0 69px 0;
+  }
+
+  .share__description {
+    width: 165px;
+    margin-right: 120px;
+    margin-left: auto;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .share {
+    width: 245px;
+    margin: 116px 0 0 auto;
+    padding: 188px 10px 42px 10px;
+  }
+
+  .share__description {
+    margin: 0 auto;
+
+    text-align: center;
+  }
 }

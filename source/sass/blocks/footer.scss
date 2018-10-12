@@ -1,14 +1,18 @@
 .footer {
-  @include container;
-  padding-top: 40px;
-
   background-color: rgb(242, 242, 242);
+}
+
+.footer__container {
+  @include container;
+
+  padding-top: 40px;
 }
 
 .footer__main-title {
   display: block;
-  margin: 0 auto;
-  margin-bottom: 29px;
+  width: 128px;
+  height: 24px;
+  margin: 0 auto 29px auto;
 }
 
 .footer__copyright {
@@ -31,4 +35,24 @@
 
 .footer__copyright-link {
   font-size: 0;
+}
+
+@media (min-width: $tabletWidth) {
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .footer__main-title {
+    margin: auto 27px auto 0;
+  }
+
+  .footer__copyright {
+    width: 164px;
+    min-height: 34px;
+    margin: auto 0;
+    padding-top: 8px;
+  }
 }

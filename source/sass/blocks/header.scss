@@ -1,24 +1,125 @@
 .header {
   @include container;
-  padding: 0;
 
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
+  position: relative;
+
+  padding: 11px 0 0 0;
+
+  &--bg-cat {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+
+      display: block;
+      width: 100%;
+      height: 305px;
+
+      background-color: $basicThemeColor;
+      background-image: url("../img/index-background-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+    }
+  }
 }
 
 .header__wrap {
-  min-height: 66px;
+  position: relative;
 
-  border-bottom: 1px solid rgb(230, 230, 230);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.header__logo-image {
+  display: block;
+  width: 191px;
+  height: 38px;
+  margin: 0 0 16px 20px;
+  padding: 0;
 }
 
 .header__button {
-  margin: 0;
+  width: 18px;
+  height: 18px;
+  margin: 12px 23px auto auto;
   padding: 0;
 
   font-size: 0;
 
   border: 0;
+}
+
+@media (min-width: $tabletWidth) {
+  .header {
+    padding-top: 24px;
+
+    &--bg-cat {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .header__wrap {
+    display: flex;
+  }
+
+  .header__logo {
+    flex-shrink: 0;
+  }
+
+  .header__logo-image {
+    width: 173px;
+    height: 58px;
+    margin: 0;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__menu {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .header {
+    padding-top: 54px;
+
+    &--bg-cat {
+      &::before {
+        top: 0;
+        right: 0;
+
+        display: block;
+        width: 50%;
+        height: 696px;
+
+        background-image: url("../img/index-background-desktop@1x.jpg");
+      }
+    }
+  }
+
+  .header__logo-image {
+    width: 245px;
+    height: 60px;
+  }
+
+  .header--bg-cat .nav-main {
+    color: rgb(255, 255, 255);
+  }
+
+  .header--bg-cat .nav-main__item {
+    &:hover {
+      border-bottom-color: rgb(255, 255, 255);
+    }
+
+    &--active {
+      border-bottom-color: rgb(255, 255, 255);
+    }
+  }
 }
