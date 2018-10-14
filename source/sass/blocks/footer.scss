@@ -16,14 +16,6 @@
   padding: 0;
 
   cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 }
 
 .footer__logo-image {
@@ -32,6 +24,14 @@
   height: 24px;
   margin: 0;
   padding: 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .footer__copyright-link {
@@ -53,7 +53,6 @@
 }
 
 .footer__copyright-text {
-  display: block;
   margin: 0 auto 0 0;
   padding: 8px 0 0 0;
 
@@ -61,11 +60,15 @@
   line-height: 16px;
   font-family: $arialFont;
   color: $basicTextColor;
+
+  pointer-events: none;
 }
 
 .footer__copyright-logo {
   width: 27px;
   height: 34px;
+
+  pointer-events: none;
 }
 
 @media (min-width: $tabletWidth) {

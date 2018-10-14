@@ -30,7 +30,7 @@
     color: $basicThemeColor;
   }
 
-  &:active {
+  &:active svg {
     color: $basicThemeColor;
 
     opacity: 0.3;
@@ -39,6 +39,8 @@
 
 .social__icon {
   height: inherit;
+
+  pointer-events: none;
 
   &--vk {
     width: 22px;

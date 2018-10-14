@@ -111,6 +111,8 @@
   .extra {
     flex-wrap: nowrap;
     align-items: center;
+    //FIX IE11 not center bug
+    height: 1px;
     min-height: 72px;
     padding: 0 0 1px 0;
 
@@ -124,7 +126,7 @@
   }
 
   .extra__property {
-    width: 290px;
+    width: 295px;
     margin: 8px 0 0 80px;
   }
 
@@ -137,7 +139,7 @@
   }
 
   .extra__property-value {
-    width: 45px;
+    width: 50px;
     padding-left: 0;
 
     text-align: left;
