@@ -25,6 +25,10 @@
 .advantages__item {
   position: relative;
 
+  display: flex;
+  align-items: center;
+  height: 0;
+  min-height: 60px;
   margin: 0 0 20px 0;
   padding: 2px 0 4px 80px;
 
@@ -99,8 +103,10 @@
   }
 
   .advantages__item {
-    width: 245px;
-    margin: 44px 139px 43px 0;
+    display: block;
+    width: 34.61%;
+    height: auto;
+    margin: 44px 19.63% 43px 0;
     padding: 112px 0 46px 0;
 
     font-size: 16px;
@@ -170,6 +176,7 @@
   }
 
   .advantages__item {
+    width: 245px;
     margin: 0 80px 40px 0;
 
     &:nth-child(2n) {

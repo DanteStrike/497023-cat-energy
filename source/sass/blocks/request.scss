@@ -12,7 +12,7 @@
 }
 
 .request__annotation {
-  width: 230px;
+  width: 82.14%;
   margin: 0 0 39px 0;
   padding: 0 0 0 1px;
 
@@ -154,10 +154,10 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -20px;
+    left: -7.14%;
 
     display: block;
-    width: 320px;
+    width: 114.28%;
     height: 100%;
 
     border: 1px solid rgb(237, 237, 237);
@@ -169,7 +169,8 @@
 }
 
 .request__goals-list {
-  margin: 0;
+  width: 270px;
+  margin: 0 auto;
   padding: 0;
 
   list-style: none;
@@ -301,10 +302,10 @@
 
 .request__comment-text {
   display: block;
-  width: 280px;
+  width: 100%;
   height: 150px;
   margin: 0;
-  padding: 12px 10px 12px 15px;
+  padding: 4.29% 3.57% 4.29% 5.36%;
   overflow: auto;
 
   font: inherit;
@@ -357,6 +358,12 @@
 }
 
 .request__additionally-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
   margin: 0 0 35px 0;
   padding: 0;
 
@@ -365,6 +372,7 @@
 
 .request__additionally-item {
   display: block;
+  width: 220px;
   margin: 0 0 12px 0;
   padding: 0;
 
@@ -466,7 +474,7 @@
   }
 
   .request__annotation {
-    width: 344px;
+    width: 52.43%;
     margin-bottom: 66px;
 
     font-size: 20px;
@@ -498,7 +506,8 @@
   }
 
   .request__goals-list {
-    min-height: 196px;
+    width: auto;
+    margin: 0;
     padding: 24px 28px 24px 28px;
 
     border: 1px solid rgb(230, 230, 230);
@@ -580,9 +589,8 @@
   }
 
   .request__comment-text {
-    width: 631px;
     height: 174px;
-    padding: 14px 19px;
+    padding: 2.22% 3.01%;
   }
 
   .request__additionally-title {
@@ -598,15 +606,16 @@
   .request__additionally-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
     margin-bottom: 22px;
   }
 
   .request__additionally-item {
-    width: 284px;
+    width: 45.01%;
     min-height: 40px;
-    margin-right: 60px;
+    margin-right: 9.51%;
     margin-bottom: 32px;
 
     &:last-child {
@@ -639,9 +648,9 @@
 
   .request__button {
     display: inline-block;
-    width: 284px;
+    width: 45.01%;
     min-height: 52px;
-    margin-right: 58px;
+    margin-right: 9.19%;
     margin-bottom: 0;
     padding-left: 0;
 

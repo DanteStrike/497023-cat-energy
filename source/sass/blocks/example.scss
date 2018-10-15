@@ -20,7 +20,7 @@
   display: block;
   margin: 0;
   margin-bottom: 23px;
-  padding: 0 20px;
+  padding: 0 6.25%;
 
   font: inherit;
   font-size: 36px;
@@ -33,7 +33,7 @@
   align-content: flex-start;
   align-items: flex-start;
   margin-bottom: 17px;
-  padding: 0 20px;
+  padding: 0 6.25%;
 }
 
 .example__description {
@@ -49,7 +49,7 @@
 .example__wrap-column {
   position: relative;
 
-  width: 124px;
+  width: 44.29%;
   height: 56px;
   margin-bottom: 34px;
 
@@ -59,7 +59,7 @@
   border-radius: 3px;
 
   &--left {
-    margin-right: 32px;
+    margin-right: auto;
   }
 }
 
@@ -147,11 +147,11 @@
   }
 
   .example__wrap-column {
-    width: 162px;
+    width: 22.88%;
     height: 72px;
 
     &--left {
-      margin-right: 42px;
+      margin-right: 5.93%;
     }
   }
 
@@ -198,7 +198,7 @@
     &::before {
       width: 100%;
 
-      background: linear-gradient(to right, rgb(242, 242, 242) 74%, rgb(234, 234, 234) 26%);
+      background: linear-gradient(to right, rgb(242, 242, 242) 60%, rgb(234, 234, 234) 40%);
     }
   }
 
@@ -222,7 +222,12 @@
   }
 
   .example__wrap-column {
+    width: 162px;
     margin-bottom: 56px;
+
+    &--left {
+      margin-right: 42px;
+    }
   }
 
   .example__field {

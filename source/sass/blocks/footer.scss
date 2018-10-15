@@ -5,6 +5,9 @@
 .footer__container {
   @include container;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-top: 39px;
 }
 
@@ -73,7 +76,7 @@
 
 @media (min-width: $tabletWidth) {
   .footer__container {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 41px;

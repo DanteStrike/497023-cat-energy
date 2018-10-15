@@ -184,11 +184,11 @@
   .programs__wrap {
     position: relative;
 
-    padding: 58px 0 529px 88px;
+    padding: 58px 0 529px 12.43%;
   }
 
   .programs__title {
-    width: 427px;
+    width: 83%;
     margin-bottom: 41px;
 
     font-size: 60px;
@@ -198,6 +198,7 @@
   }
 
   .programs__tagline {
+    width: 60%;
     margin-bottom: 48px;
 
     font-size: 20px;
@@ -208,12 +209,13 @@
 
   .programs__product-img {
     position: absolute;
+    right: 0;
     bottom: 0;
     left: 0;
 
     width: 709px;
     height: 609px;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .programs__button {
@@ -313,6 +315,10 @@
     padding: 108px 0 188px 80px;
   }
 
+  .programs__title {
+    width: 40%;
+  }
+
   .programs__product-img {
     top: 28px;
     right: 218px;
@@ -324,6 +330,7 @@
   }
 
   .programs__tagline {
+    width: 30%;
     margin-bottom: 53px;
   }
 

@@ -88,6 +88,9 @@
 
 @media (min-width: $tabletWidth) {
   .slider {
+    width: 708px;
+    margin: 0 auto;
+
     background: linear-gradient(to right, rgb(242, 242, 242) 50%, rgb(234, 234, 234) 50%);
   }
 
