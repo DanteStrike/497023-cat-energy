@@ -13,19 +13,81 @@
 }
 
 @mixin container {
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 6.25%;
 
   @media (min-width: $tabletWidth) {
-    width: 768px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 3.91%;
   }
 
   @media (min-width: $desktopWidth) {
-    width: 1440px;
+    width: 1300px;
     margin: 0 auto;
-    padding: 0 110px;
+    padding: 0 40px;
+  }
+}
+
+@mixin greenLineLeft($top: 0, $dright: 0, $color: $basicThemeColor) {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+    right: calc(100% + #{$dright});
+
+    display: block;
+    width: 100vw;
+    height: 3px;
+
+    background-color: $color;
+  }
+}
+
+@mixin greenLineRight($top: 0, $dleft: 0, $color: $basicThemeColor) {
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: calc(100% + #{$dleft});
+
+    display: block;
+    width: 100vw;
+    height: 3px;
+
+    background-color: $color;
+  }
+}
+
+@mixin greenLineBoth($top: 0, $dright: 0, $dleft: 0, $color: $basicThemeColor) {
+  position: relative;
+  z-index: 1;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+
+    display: block;
+    width: 100vw;
+    height: 3px;
+
+    background-color: $color;
+  }
+
+  &::before {
+    right: calc(100% + #{$dright});
+  }
+
+  &::after {
+    left: calc(100% + #{$dleft});
   }
 }

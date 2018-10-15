@@ -16,11 +16,31 @@
 }
 
 .products__more {
+  position: relative;
+
   width: 100%;
-  padding: 79px 19px 24px 19px;
+  padding: 79px 5.94% 24px 5.94%;
 
   border: 1px solid rgb(237, 237, 237);
   border-top: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    right: 0;
+    left: 0;
+
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+  }
 }
 
 .products__more-title {
@@ -61,11 +81,20 @@
   }
 
   .products__more {
-    width: 324px;
+    width: 45.76%;
     margin-top: 81px;
     padding: 165px 20px 38px 20px;
 
     border: 1px solid rgb(230, 230, 230);
+
+    &::before {
+      top: 55px;
+
+      width: 60px;
+      height: 60px;
+
+      background-image: url("../img/icon-plus.svg");
+    }
   }
 
   .products__more-title {
@@ -85,21 +114,29 @@
   }
 
   .products__button {
-    width: 250px;
+    width: 88.65%;
     margin: 0 auto;
   }
 }
 
 @media (min-width: $desktopWidth) {
   .products {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
     padding-top: 31px;
   }
 
   .products__more {
     width: 245px;
     padding-top: 162px;
-    padding-bottom: 40px;
+    padding-bottom: 39px;
+
+    &::before {
+      top: 53px;
+    }
+  }
+
+  .products__more-text {
+    margin-bottom: 85px;
   }
 
   .products__button {

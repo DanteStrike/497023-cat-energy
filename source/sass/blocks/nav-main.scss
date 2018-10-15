@@ -86,12 +86,12 @@
   }
 
   .nav-main__list {
-    width: 480px;
+    width: auto;
   }
 
   .nav-main__item {
     &:not(:last-child) {
-      margin-right: 35px;
+      margin-right: 34px;
     }
   }
 

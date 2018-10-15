@@ -52,13 +52,63 @@
 }
 
 .programs__item {
+  position: relative;
+
   margin: 0 0 20px 0;
-  padding: 30px 20px 22px 20px;
+  padding: 30px 20px 20px 20px;
 
   background-color: rgb(242, 242, 242);
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    background-color: $basicThemeColor;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    display: block;
+
+    background-repeat: no-repeat;
+  }
+
+  &--slim {
+    &::after {
+      top: 22px;
+      left: 30px;
+
+      width: 35px;
+      height: 49px;
+
+      background-image: url("../img/icon-cat-slim.svg");
+    }
+  }
+
+  &--pro {
+    &::after {
+      top: 35px;
+      left: 13px;
+
+      width: 67px;
+      height: 28px;
+
+      background-image: url("../img/icon-cat-pro.svg");
+    }
   }
 }
 
@@ -85,9 +135,11 @@
 }
 
 .programs__link {
-  display: block;
+  position: relative;
+
+  display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 0 36px 0 0;
 
   font: inherit;
   font-size: 16px;
@@ -97,7 +149,30 @@
   text-transform: uppercase;
 
   &:active {
+    padding-right: 45px;
+
     opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 0;
+
+    display: block;
+    width: 24px;
+    height: 11px;
+
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:active::after {
+    width: 33px;
+    height: 11px;
+
+    background-image: url("../img/icon-right-arrow-verylong.svg");
   }
 }
 
@@ -109,11 +184,11 @@
   .programs__wrap {
     position: relative;
 
-    padding: 58px 0 529px 88px;
+    padding: 58px 0 529px 12.43%;
   }
 
   .programs__title {
-    width: 427px;
+    width: 83%;
     margin-bottom: 41px;
 
     font-size: 60px;
@@ -123,6 +198,7 @@
   }
 
   .programs__tagline {
+    width: 60%;
     margin-bottom: 48px;
 
     font-size: 20px;
@@ -133,12 +209,13 @@
 
   .programs__product-img {
     position: absolute;
+    right: 0;
     bottom: 0;
-    left: 90px;
+    left: 0;
 
-    width: 609px;
+    width: 709px;
     height: 609px;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .programs__button {
@@ -154,14 +231,48 @@
 
   .programs__item {
     margin-bottom: 30px;
-    padding: 76px 280px 62px 52px;
+    padding: 76px 280px 60px 52px;
 
     &:last-child {
       margin-bottom: 0;
     }
 
+    &::before {
+      top: 92px;
+      right: 62px;
+      left: auto;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim {
+      &::after {
+        top: 80px;
+        right: 92px;
+        left: auto;
+
+        width: 140px;
+        height: 194px;
+      }
+    }
+
     &--pro {
       padding-right: 315px;
+
+      &::before {
+        top: 91px;
+        right: 60px;
+      }
+
+      &::after {
+        top: 135px;
+        right: 28px;
+        left: auto;
+
+        width: 268px;
+        height: 112px;
+      }
     }
   }
 
@@ -183,8 +294,18 @@
   }
 
   .programs__link {
+    padding-right: 48px;
+
     font-size: 20px;
     line-height: 20px;
+
+    &:active {
+      padding-right: 57px;
+    }
+
+    &::after {
+      top: 5px;
+    }
   }
 }
 
@@ -194,17 +315,22 @@
     padding: 108px 0 188px 80px;
   }
 
+  .programs__title {
+    width: 40%;
+  }
+
   .programs__product-img {
-    top: 30px;
-    right: 220px;
-    bottom: unset;
-    left: unset;
+    top: 28px;
+    right: 218px;
+    bottom: auto;
+    left: auto;
 
     width: 552px;
     height: 499px;
   }
 
   .programs__tagline {
+    width: 30%;
     margin-bottom: 53px;
   }
 
@@ -216,7 +342,7 @@
   .programs__item {
     width: 570px;
     margin-bottom: 28px;
-    padding: 76px 55px 62px 52px;
+    padding: 76px 55px 60px 52px;
 
     &:last-child {
       margin-bottom: 28px;
@@ -224,6 +350,43 @@
 
     &:nth-child(2n+1) {
       margin-right: 80px;
+    }
+
+    &::before {
+      top: 47px;
+      right: auto;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim {
+      &::after {
+        top: 41px;
+        right: auto;
+        left: 66px;
+
+        width: 70px;
+        height: 97px;
+      }
+    }
+
+    &--pro {
+      &::before {
+        top: 47px;
+        right: auto;
+        left: 52px;
+      }
+
+      &::after {
+        top: 69px;
+        right: auto;
+        left: 34px;
+
+        width: 134px;
+        height: 56px;
+      }
     }
   }
 
