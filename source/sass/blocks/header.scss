@@ -57,6 +57,7 @@
   height: 18px;
   margin: 12px 23px auto auto;
   padding: 0;
+  cursor: pointer;
 
   font-size: 0;
 
@@ -68,6 +69,14 @@
 
   &--menu {
     background-image: url("../img/icon-mobile-menu.svg");
+  }
+
+  &--menu ~ .header__menu {
+    display: none;
+  }
+
+  &--nojs ~ .header__menu {
+    display: block;
   }
 }
 
@@ -97,6 +106,10 @@
 
   .header__button {
     display: none;
+
+    &--menu ~ .header__menu {
+      display: block;
+    }
   }
 
   .header__menu {
