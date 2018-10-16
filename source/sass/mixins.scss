@@ -33,43 +33,7 @@
   }
 }
 
-@mixin greenLineLeft($top: 0, $dright: 0, $color: $basicThemeColor) {
-  position: relative;
-  z-index: 1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: $top;
-    right: calc(100% + #{$dright});
-
-    display: block;
-    width: 100vw;
-    height: 3px;
-
-    background-color: $color;
-  }
-}
-
-@mixin greenLineRight($top: 0, $dleft: 0, $color: $basicThemeColor) {
-  position: relative;
-  z-index: 1;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: $top;
-    left: calc(100% + #{$dleft});
-
-    display: block;
-    width: 100vw;
-    height: 3px;
-
-    background-color: $color;
-  }
-}
-
-@mixin greenLineBoth($top: 0, $dright: 0, $dleft: 0, $color: $basicThemeColor) {
+@mixin green-line-both($top: 0, $dright: 0, $dleft: 0, $color: $basicThemeColor) {
   position: relative;
   z-index: 1;
 

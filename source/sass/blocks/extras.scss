@@ -5,7 +5,7 @@
 }
 
 .extras__title {
-  @include greenLineBoth(14px, 26px, 20px);
+  @include green-line-both(14px, 26px, 20px);
 
   display: block;
   width: 247px;
@@ -27,7 +27,7 @@
   }
 
   .extras__title {
-    @include greenLineBoth(21px, 1px, 27px);
+    @include green-line-both(21px, 1px, 27px);
 
     width: 384px;
     margin-bottom: 46px;
@@ -46,7 +46,7 @@
   }
 
   .extras__title {
-    @include greenLineBoth(22px, 40px, -11px);
+    @include green-line-both(22px, 40px, -11px);
 
     padding-left: 0;
   }

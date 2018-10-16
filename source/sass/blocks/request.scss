@@ -255,7 +255,7 @@
 }
 
 .request__owner-title {
-  @include greenLineBoth(14px, 26px, 16px);
+  @include green-line-both(14px, 26px, 16px);
 
   display: block;
   width: 185px;
@@ -293,7 +293,7 @@
 }
 
 .request__comment-title {
-  @include greenLineBoth(14px, 26px, 2px);
+  @include green-line-both(14px, 26px, 2px);
 
   display: block;
   width: 140px;
@@ -350,7 +350,7 @@
 }
 
 .request__additionally-title {
-  @include greenLineBoth(14px, 26px, 14px);
+  @include green-line-both(14px, 26px, 14px);
 
   display: block;
   width: 150px;
@@ -549,7 +549,7 @@
   }
 
   .request__owner-title {
-    @include greenLineBoth(22px, 40px, 17px);
+    @include green-line-both(22px, 40px, 17px);
 
     width: 536px;
     margin-bottom: 76px;
@@ -589,7 +589,7 @@
   }
 
   .request__comment-title {
-    @include greenLineBoth(22px, 40px, 19px);
+    @include green-line-both(22px, 40px, 19px);
 
     width: 200px;
     margin-bottom: 76px;
@@ -604,7 +604,7 @@
   }
 
   .request__additionally-title {
-    @include greenLineBoth(22px, 40px, 32px);
+    @include green-line-both(22px, 40px, 32px);
 
     width: 220px;
     margin-bottom: 57px;
