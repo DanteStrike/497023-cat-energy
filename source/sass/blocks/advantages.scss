@@ -45,6 +45,7 @@
     background-color: $basicThemeColor;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 50px auto;
   }
 
   .advantages__text {
@@ -78,6 +79,33 @@
   &--clock {
     &::after {
       background-image: url("../img/advantage-clock@1x.png");
+    }
+  }
+
+  @media (min-resolution: $retinaDpi),
+    (min-resolution: $retinaDppx) {
+    &--leaf {
+      &::after {
+        background-image: url("../img/advantage-leaf@2x.png");
+      }
+    }
+
+    &--powder {
+      &::after {
+        background-image: url("../img/advantage-powder@2x.png");
+      }
+    }
+
+    &--dining {
+      &::after {
+        background-image: url("../img/advantage-dining@2x.png");
+      }
+    }
+
+    &--clock {
+      &::after {
+        background-image: url("../img/advantage-clock@2x.png");
+      }
     }
   }
 }

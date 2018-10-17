@@ -12,7 +12,7 @@
   background-color: $basicThemeColor;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 
   &::before {
     content: "";
@@ -29,6 +29,11 @@
     background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  @media (min-resolution: $retinaDpi),
+    (min-resolution: $retinaDppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
   }
 }
 
@@ -61,6 +66,11 @@
       right: auto;
       left: 12.85%;
     }
+
+    @media (min-resolution: $retinaDpi),
+      (min-resolution: $retinaDppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   .share__description {
@@ -84,6 +94,11 @@
 
     &::before {
       left: 96px;
+    }
+
+    @media (min-resolution: $retinaDpi),
+      (min-resolution: $retinaDppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
     }
   }
 

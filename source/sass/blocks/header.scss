@@ -15,6 +15,11 @@
       background-image: url("../img/index-background-mobile@1x.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media (min-resolution: $retinaDpi),
+        (min-resolution: $retinaDppx) {
+        background-image: url("../img/index-background-mobile@2x.jpg");
+      }
     }
   }
 }
@@ -52,6 +57,7 @@
   height: 18px;
   margin: 12px 23px auto auto;
   padding: 0;
+  cursor: pointer;
 
   font-size: 0;
 
@@ -63,6 +69,14 @@
 
   &--menu {
     background-image: url("../img/icon-mobile-menu.svg");
+  }
+
+  &--menu ~ .header__menu {
+    display: none;
+  }
+
+  &--nojs ~ .header__menu {
+    display: block;
   }
 }
 
@@ -92,6 +106,10 @@
 
   .header__button {
     display: none;
+
+    &--menu ~ .header__menu {
+      display: block;
+    }
   }
 
   .header__menu {
@@ -112,6 +130,11 @@
         height: 696px;
 
         background-image: url("../img/index-background-desktop@1x.jpg");
+
+        @media (min-resolution: $retinaDpi),
+          (min-resolution: $retinaDppx) {
+          background-image: url("../img/index-background-desktop@2x.jpg");
+        }
       }
     }
   }

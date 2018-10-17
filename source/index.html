@@ -21,7 +21,7 @@
             <img class="header__logo-image" src="./img/logo-mobile.svg" alt="Логотип Кэт энерджи" width="191" height="38">
           </picture>
         </a>
-        <button class="header__button" type="button">Открыть меню</button>
+        <button class="header__button header__button--menu header__button--nojs" type="button">Открыть меню</button>
         <nav class="header__menu nav-main">
           <ul class="nav-main__list">
             <li class="nav-main__item nav-main__item--active">
@@ -44,9 +44,9 @@
           <h1 class="programs__title">Функциональное питание для котов</h1>
           <strong class="programs__tagline">Занялся собой? Займись котом!</strong>
           <picture>
-            <source media="(min-width: 1300px)" srcset="./img/index-can-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="./img/index-can-tablet@1x.jpg">
-            <img class="programs__product-img" src="./img/index-can-mobile@1x.png" width="280" height="270" alt="Товар">
+            <source media="(min-width: 1300px)" srcset="./img/index-can-desktop@1x.png, ./img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="./img/index-can-tablet@1x.jpg, ./img/index-can-tablet@2x.jpg 2x">
+            <img class="programs__product-img" src="./img/index-can-mobile@1x.png" srcset="./img/index-can-mobile@2x.png 2x" alt="Товар" width="280" height="270">
           </picture>
           <a href="form.html" class="button programs__button">Подобрать программу</a>
         </div>
@@ -104,16 +104,16 @@
             <ul class="slider__list">
               <li class="slider__item slider__item--before">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="./img/before-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png">
-                  <img class="slider__item-image" src="./img/before-mobile@1x.png" alt="Кот до" width="320" height="240">
+                  <source media="(min-width: 1300px)" srcset="./img/before-desktop@1x.png, ./img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png, ./img/before-tablet@2x.png 2x">
+                  <img class="slider__item-image" src="./img/before-mobile@1x.png" srcset="./img/before-mobile@2x.png 2x" alt="Кот до" width="320" height="240">
                 </picture>
               </li>
               <li class="slider__item slider__item--after">
                 <picture>
-                  <source media="(min-width: 1300px)" srcset="./img/after-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png">
-                  <img class="slider__item-image" src="./img/after-mobile@1x.png" alt="Кот до" width="320" height="240">
+                  <source media="(min-width: 1300px)" srcset="./img/after-desktop@1x.png, ./img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png, ./img/after-tablet@2x.png 2x">
+                  <img class="slider__item-image" src="./img/after-mobile@1x.png" srcset="./img/after-mobile@2x.png 2x" alt="Кот после" width="320" height="240">
                 </picture>
               </li>
             </ul>
@@ -184,5 +184,7 @@
         </a>
       </div>
     </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
