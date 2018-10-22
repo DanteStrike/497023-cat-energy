@@ -19,7 +19,7 @@ var jsMin = require("gulp-uglify");
 //IMAGE
 var imageMin = require("gulp-imagemin");
 var pngquant = require("imagemin-pngquant");
-var mozjpeg = require("imagemin-mozjpeg");
+//var mozjpeg = require("imagemin-mozjpeg");
 var webp = require("gulp-webp");
 var svgStore = require("gulp-svgstore");
 
@@ -105,7 +105,8 @@ gulp.task("image", function () {
   return gulp.src(path.build.img + "*.{png,jpg,svg}")
     .pipe(imageMin([
       pngquant(),
-      mozjpeg({progressive: true}),
+      imageMin.jpegtran({progressive: true}),
+      //mozjpeg({progressive: true}),
       imageMin.svgo()
     ], {verbose: true}))
     .pipe(gulp.dest(path.build.img));
