@@ -1,12 +1,11 @@
-'use strict';
+"use strict";
 
-//  Polyfills
-
+//Polyfills
 (function () {
-  var throttle = function throttle(type, name, obj) {
+  let throttle = function (type, name, obj) {
     obj = obj || window;
-    var running = false;
-    var func = function func() {
+    let running = false;
+    let func = function () {
       if (running) {
         return;
       }
@@ -20,16 +19,16 @@
   };
 
   /* init - you can init any event */
-  throttle('resize', 'optimizedResize');
+  throttle("resize", "optimizedResize");
 })();
 
 (function () {
 
-  if (typeof window.CustomEvent === 'function') return false;
+  if (typeof window.CustomEvent === "function") return false;
 
   function CustomEvent(event, params) {
     params = params || { bubbles: false, cancelable: false, detail: undefined };
-    var evt = document.createEvent('CustomEvent');
+    let evt = document.createEvent("CustomEvent");
     evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
     return evt;
   }
@@ -41,25 +40,24 @@
 
 //  -----------------------------------------------------------------------------------
 (function () {
-  //  Service
-
+  //Service
   function getOffsetRect(elem) {
 
-    var box = elem.getBoundingClientRect();
+    let box = elem.getBoundingClientRect();
 
-    var body = document.body;
-    var docElem = document.documentElement;
+    let body = document.body;
+    let docElem = document.documentElement;
 
-    var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop;
-    var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft;
+    let scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop;
+    let scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft;
 
-    var clientTop = docElem.clientTop || body.clientTop || 0;
-    var clientLeft = docElem.clientLeft || body.clientLeft || 0;
+    let clientTop = docElem.clientTop || body.clientTop || 0;
+    let clientLeft = docElem.clientLeft || body.clientLeft || 0;
 
-    var top = box.top + scrollTop - clientTop;
-    var left = box.left + scrollLeft - clientLeft;
+    let top = box.top + scrollTop - clientTop;
+    let left = box.left + scrollLeft - clientLeft;
 
-    var elemCoords = {
+    let elemCoords = {
       top: Math.round(top),
       left: Math.round(left)
     };
@@ -67,57 +65,57 @@
     return elemCoords;
   }
 
-  //  -----------------------------SLIDER------------------------------------------------------
-  var slider = document.querySelector('.slider');
-  var sliderList = slider.querySelector('.slider__list');
-  var catBefore = sliderList.querySelector('.slider__item--before');
-  var catAfter = sliderList.querySelector('.slider__item--after');
+  //-----------------------------SLIDER------------------------------------------------------
+  const TABLET_MIN_WIDTH = 768;
+  const DESKTOP_MIN_WIDTH = 1300;
 
-  var range = slider.querySelector('.slider__range');
-  var rangeButton = range.querySelector('.slider__range-button');
+  const DEVICE_MOBILE = "mobile";
+  const DEVICE_TABLET = "tablet";
+  const DEVICE_DESKTOP = "desktop";
 
-  var sliderToogles = slider.querySelector('.slider__toogles');
-  var sliderToogleBefore = sliderToogles.querySelector('.slider__toogle--before');
-  var sliderToogleAfter = sliderToogles.querySelector('.slider__toogle--after');
+  const Z_INDEX_VISIBLE = "99";
+  const Z_INDEX_HIDDEN = "-1";
 
-  var TABLET_MIN_WIDTH = 768;
-  var DESKTOP_MIN_WIDTH = 1300;
+  const RANGE_BUTTON_BORDER_LEFT = 0;
+  const RANGE_BUTTON_BORDER_RIGHT = 428;
+  const RANGE_BUTTON_START = Math.round((RANGE_BUTTON_BORDER_LEFT + RANGE_BUTTON_BORDER_RIGHT) / 2);
 
-  var DEVICE_MOBILE = 'mobile';
-  var DEVICE_TABLET = 'tablet';
-  var DEVICE_DESKTOP = 'desktop';
+  const RANGE_BUTTON_MARGIN_LEFT_AUTO = "0 0 0 auto";
+  const RANGE_BUTTON_MARGIN_RIGHT_AUTO = "0 auto 0 0";
 
-  var Z_INDEX_VISIBLE = '99';
-  var Z_INDEX_HIDDEN = '-1';
+  const LINEAR_GRADIENT_ORIENTATION = "to right";
+  const LINEAR_GRADIENT_COLOR_ONE = "#f2f2f2";
+  const LINEAR_GRADIENT_COLOR_TWO = "#eaeaea";
 
-  var RANGE_BUTTON_BORDER_LEFT = 0;
-  var RANGE_BUTTON_BORDER_RIGHT = 428;
-  var RANGE_BUTTON_START = Math.round((RANGE_BUTTON_BORDER_LEFT + RANGE_BUTTON_BORDER_RIGHT) / 2);
+  let slider = document.querySelector(".slider");
+  let sliderList = slider.querySelector(".slider__list");
+  let catBefore = sliderList.querySelector(".slider__item--before");
+  let catAfter = sliderList.querySelector(".slider__item--after");
 
-  var RANGE_BUTTON_MARGIN_LEFT_AUTO = '0 0 0 auto';
-  var RANGE_BUTTON_MARGIN_RIGHT_AUTO = '0 auto 0 0';
+  let range = slider.querySelector(".slider__range");
+  let rangeButton = range.querySelector(".slider__range-button");
 
-  var LINEAR_GRADIENT_ORIENTATION = 'to right';
-  var LINEAR_GRADIENT_COLOR_ONE = '#f2f2f2';
-  var LINEAR_GRADIENT_COLOR_TWO = '#eaeaea';
+  let sliderToogles = slider.querySelector(".slider__toogles");
+  let sliderToogleBefore = sliderToogles.querySelector(".slider__toogle--before");
+  let sliderToogleAfter = sliderToogles.querySelector(".slider__toogle--after");
 
-  var collectSliderGradient = function collectSliderGradient() {
-    var sliderListOffset = parseInt(getComputedStyle(sliderList).marginLeft);
-    var sliderItemOffset = parseInt(getComputedStyle(catBefore).left);
+  let collectSliderGradient = function () {
+    let sliderListOffset = parseInt(getComputedStyle(sliderList).marginLeft);
+    let sliderItemOffset = parseInt(getComputedStyle(catBefore).left);
 
-    var background = '';
-    var gradientLenght = catBefore.clientWidth + sliderListOffset + sliderItemOffset;
+    let background = "";
+    let gradientLenght = catBefore.clientWidth + sliderListOffset + sliderItemOffset;
 
-    background = 'linear-gradient(' + LINEAR_GRADIENT_ORIENTATION + ', ' + (LINEAR_GRADIENT_COLOR_ONE + ' ' + gradientLenght + 'px, ') + (LINEAR_GRADIENT_COLOR_TWO + ' ' + gradientLenght + 'px)');
+    background = "linear-gradient(" + LINEAR_GRADIENT_ORIENTATION + ", " + (LINEAR_GRADIENT_COLOR_ONE + " " + gradientLenght + "px, ") + (LINEAR_GRADIENT_COLOR_TWO + " " + gradientLenght + "px)");
 
     return background;
   };
 
-  var onSliderTooglesClick = function onSliderTooglesClick(evt) {
+  let onSliderTooglesClick = function (evt) {
     evt.preventDefault();
 
-    var target = evt.target;
-    var deltaX = void 0;
+    let target = evt.target;
+    let deltaX = 0;
 
     switch (target) {
       case sliderToogleBefore:
@@ -127,9 +125,9 @@
           rangeButton.style.margin = RANGE_BUTTON_MARGIN_RIGHT_AUTO;
         } else {
           deltaX = parseInt(rangeButton.style.left) - RANGE_BUTTON_BORDER_LEFT;
-          catBefore.style.width = catBefore.clientWidth + deltaX + 'px';
-          catAfter.style.width = catAfter.clientWidth - deltaX + 'px';
-          rangeButton.style.left = RANGE_BUTTON_BORDER_LEFT + 'px';
+          catBefore.style.width = catBefore.clientWidth + deltaX + "px";
+          catAfter.style.width = catAfter.clientWidth - deltaX + "px";
+          rangeButton.style.left = RANGE_BUTTON_BORDER_LEFT + "px";
           slider.style.background = collectSliderGradient();
         }
 
@@ -142,9 +140,9 @@
           rangeButton.style.margin = RANGE_BUTTON_MARGIN_LEFT_AUTO;
         } else {
           deltaX = RANGE_BUTTON_BORDER_RIGHT - parseInt(rangeButton.style.left);
-          catBefore.style.width = catBefore.clientWidth - deltaX + 'px';
-          catAfter.style.width = catAfter.clientWidth + deltaX + 'px';
-          rangeButton.style.left = RANGE_BUTTON_BORDER_RIGHT + 'px';
+          catBefore.style.width = catBefore.clientWidth - deltaX + "px";
+          catAfter.style.width = catAfter.clientWidth + deltaX + "px";
+          rangeButton.style.left = RANGE_BUTTON_BORDER_RIGHT + "px";
           slider.style.background = collectSliderGradient();
         }
 
@@ -157,68 +155,68 @@
     return;
   };
 
-  var onRangeButtonMouseDown = function onRangeButtonMouseDown(evt) {
+  let onRangeButtonMouseDown = function (evt) {
     evt.preventDefault();
 
-    var target = evt.target;
-    var targetCoordX = getOffsetRect(target).left;
-    var mouseStartCoordX = evt.clientX;
-    var mouseTargetPositionX = mouseStartCoordX - targetCoordX;
+    let target = evt.target;
+    let targetCoordX = getOffsetRect(target).left;
+    let mouseStartCoordX = evt.clientX;
+    let mouseTargetPositionX = mouseStartCoordX - targetCoordX;
 
-    var rangeBorderLeft = RANGE_BUTTON_BORDER_LEFT;
-    var rangeBorderRight = RANGE_BUTTON_BORDER_RIGHT;
+    let rangeBorderLeft = RANGE_BUTTON_BORDER_LEFT;
+    let rangeBorderRight = RANGE_BUTTON_BORDER_RIGHT;
 
-    var onThisMouseMove = function onThisMouseMove(moveEvt) {
+    let onThisMouseMove = function (moveEvt) {
       moveEvt.preventDefault();
 
-      var mouseMoveCoordX = moveEvt.clientX;
-      var newTargetCoordX = target.offsetLeft + mouseMoveCoordX - mouseTargetPositionX - targetCoordX;
+      let mouseMoveCoordX = moveEvt.clientX;
+      let newTargetCoordX = target.offsetLeft + mouseMoveCoordX - mouseTargetPositionX - targetCoordX;
 
       if (newTargetCoordX >= rangeBorderLeft && newTargetCoordX <= rangeBorderRight) {
-        var deltaX = parseInt(target.style.left) - newTargetCoordX;
-        catBefore.style.width = catBefore.clientWidth + deltaX + 'px';
-        catAfter.style.width = catAfter.clientWidth - deltaX + 'px';
+        let deltaX = parseInt(target.style.left) - newTargetCoordX;
+        catBefore.style.width = catBefore.clientWidth + deltaX + "px";
+        catAfter.style.width = catAfter.clientWidth - deltaX + "px";
         slider.style.background = collectSliderGradient();
 
-        target.style.left = newTargetCoordX + 'px';
+        target.style.left = newTargetCoordX + "px";
         targetCoordX = getOffsetRect(target).left;
       }
 
       return;
     };
 
-    var onThisMouseUp = function onThisMouseUp(upEvt) {
+    let onThisMouseUp = function (upEvt) {
       upEvt.preventDefault();
-      document.removeEventListener('mousemove', onThisMouseMove);
-      document.removeEventListener('mouseup', onThisMouseUp);
+      document.removeEventListener("mousemove", onThisMouseMove);
+      document.removeEventListener("mouseup", onThisMouseUp);
 
       return;
     };
 
-    document.addEventListener('mousemove', onThisMouseMove);
-    document.addEventListener('mouseup', onThisMouseUp);
+    document.addEventListener("mousemove", onThisMouseMove);
+    document.addEventListener("mouseup", onThisMouseUp);
 
     return;
   };
 
-  var onWindowResize = function onWindowResize(evt) {
+  let onWindowResize = function (evt) {
     if (window.innerWidth <= TABLET_MIN_WIDTH &&
         slider.dataset.device != DEVICE_MOBILE) {
-      catBefore.style.width = '';
-      catAfter.style.width = '';
-      slider.style.background = '';
-      rangeButton.style.left = '';
+      catBefore.style.width = "";
+      catAfter.style.width = "";
+      slider.style.background = "";
+      rangeButton.style.left = "";
       slider.dataset.device = DEVICE_MOBILE;
     }
 
     if (window.innerWidth > TABLET_MIN_WIDTH && window.innerWidth <= DESKTOP_MIN_WIDTH
         && slider.dataset.device != DEVICE_TABLET) {
-      catBefore.style.zIndex = '';
-      catAfter.style.zIndex = '';
-      catBefore.style.width = '';
-      catAfter.style.width = '';
-      rangeButton.style.left = RANGE_BUTTON_START + 'px';
-      rangeButton.style.margin = '0';
+      catBefore.style.zIndex = "";
+      catAfter.style.zIndex = "";
+      catBefore.style.width = "";
+      catAfter.style.width = "";
+      rangeButton.style.left = RANGE_BUTTON_START + "px";
+      rangeButton.style.margin = "0";
       slider.style.background = collectSliderGradient();
       slider.dataset.device = DEVICE_TABLET;
     }
@@ -232,9 +230,9 @@
     return;
   };
 
-  rangeButton.style.left = RANGE_BUTTON_START + 'px';
-  rangeButton.style.margin = '0';
-  rangeButton.addEventListener('mousedown', onRangeButtonMouseDown);
-  sliderToogles.addEventListener('click', onSliderTooglesClick);
-  window.addEventListener('optimizedResize', onWindowResize);
+  rangeButton.style.left = RANGE_BUTTON_START + "px";
+  rangeButton.style.margin = "0";
+  rangeButton.addEventListener("mousedown", onRangeButtonMouseDown);
+  sliderToogles.addEventListener("click", onSliderTooglesClick);
+  window.addEventListener("optimizedResize", onWindowResize);
 })();

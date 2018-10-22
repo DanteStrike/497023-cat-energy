@@ -1,19 +1,19 @@
-'use strict';
+"use strict";
 
 (function () {
-  const MAIN_MENU_BUTTON_MENU = 'header__button--menu';
-  const MAIN_MENU_BUTTON_JS = 'header__button--nojs';
+  const MAIN_MENU_BUTTON_MENU = "header__button--menu";
+  const MAIN_MENU_BUTTON_JS = "header__button--nojs";
 
-  var mainMenuButton = document.querySelector('.header__button');
+  let mainMenuButton = document.querySelector(".header__button");
 
-  var onMainMenuButtonClick = function (evt) {
+  let onMainMenuButtonClick = function (evt) {
     evt.preventDefault();
 
-    var target = evt.target;
+    let target = evt.target;
 
     target.classList.toggle(MAIN_MENU_BUTTON_MENU);
   }
 
   mainMenuButton.classList.remove(MAIN_MENU_BUTTON_JS);
-  mainMenuButton.addEventListener('click', onMainMenuButtonClick);
+  mainMenuButton.addEventListener("click", onMainMenuButtonClick);
 })();
