@@ -1,12 +1,14 @@
 "use strict";
 
-//Polyfills
+//Polyfill optimizedResize
 (function () {
   let throttle = function (type, name, obj) {
     obj = obj || window;
+
     let running = false;
     let func = function () {
       if (running) {
+
         return;
       }
       running = true;
@@ -15,6 +17,7 @@
         running = false;
       });
     };
+
     obj.addEventListener(type, func);
   };
 
@@ -22,14 +25,15 @@
   throttle("resize", "optimizedResize");
 })();
 
+//Polyfill CustomEvent ie11
 (function () {
-
   if (typeof window.CustomEvent === "function") return false;
 
   function CustomEvent(event, params) {
     params = params || { bubbles: false, cancelable: false, detail: undefined };
     let evt = document.createEvent("CustomEvent");
     evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+
     return evt;
   }
 
@@ -38,7 +42,6 @@
   window.CustomEvent = CustomEvent;
 })();
 
-//  -----------------------------------------------------------------------------------
 (function () {
   //Service
   function getOffsetRect(elem) {
@@ -65,7 +68,7 @@
     return elemCoords;
   }
 
-  //-----------------------------SLIDER------------------------------------------------------
+  //SLIDER
   const TABLET_MIN_WIDTH = 768;
   const DESKTOP_MIN_WIDTH = 1300;
 
@@ -105,7 +108,6 @@
 
     let background = "";
     let gradientLenght = catBefore.clientWidth + sliderListOffset + sliderItemOffset;
-
     background = "linear-gradient(" + LINEAR_GRADIENT_ORIENTATION + ", " + (LINEAR_GRADIENT_COLOR_ONE + " " + gradientLenght + "px, ") + (LINEAR_GRADIENT_COLOR_TWO + " " + gradientLenght + "px)");
 
     return background;
@@ -177,7 +179,6 @@
         catBefore.style.width = catBefore.clientWidth + deltaX + "px";
         catAfter.style.width = catAfter.clientWidth - deltaX + "px";
         slider.style.background = collectSliderGradient();
-
         target.style.left = newTargetCoordX + "px";
         targetCoordX = getOffsetRect(target).left;
       }

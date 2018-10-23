@@ -137,6 +137,20 @@
         }
       }
     }
+
+    &--bg-cat .nav-main {
+      color: rgb(255, 255, 255);
+    }
+
+    &--bg-cat .nav-main__item {
+      &:hover {
+        border-bottom-color: rgb(255, 255, 255);
+      }
+
+      &--active {
+        border-bottom-color: rgb(255, 255, 255);
+      }
+    }
   }
 
   .header__wrap {
@@ -146,19 +160,5 @@
   .header__logo-image {
     width: 202px;
     height: 60px;
-  }
-
-  .header--bg-cat .nav-main {
-    color: rgb(255, 255, 255);
-  }
-
-  .header--bg-cat .nav-main__item {
-    &:hover {
-      border-bottom-color: rgb(255, 255, 255);
-    }
-
-    &--active {
-      border-bottom-color: rgb(255, 255, 255);
-    }
   }
 }
