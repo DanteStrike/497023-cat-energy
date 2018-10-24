@@ -6,6 +6,9 @@ var plumber = require("gulp-plumber");
 var rename = require("gulp-rename");
 var del = require("del");
 
+//HTML
+var htmlMin = require("gulp-htmlmin");
+
 //SASS | CSS
 var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
@@ -67,6 +70,11 @@ gulp.task("copy", function () {
 
 gulp.task("html", function () {
   return gulp.src(path.src.html)
+    .pipe(htmlMin({
+      collapseWhitespace: true,
+      removeComments: true,
+      minifyJS: true
+    }))
     .pipe(gulp.dest(path.build.html));
 });
 
@@ -153,6 +161,7 @@ gulp.task("server", function () {
 gulp.task("build", gulp.series(
   "clear",
   "copy",
+  "html",
   "css",
   "js",
   "webp",

@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <script>
       // Picture element HTML5 shiv
@@ -43,7 +45,6 @@
       <section class="request">
         <h2 class="request__title">Заявка</h2>
         <p class="request__annotation">Заполните анкету и мы подберем программу питания для вашего кота</p>
-
         <form class="request__form" action="https://echo.htmlacademy.ru" method="GET">
           <fieldset class="request__cat">
             <legend class="request__cat-title">О Коте</legend>
@@ -62,7 +63,6 @@
               </li>
             </ul>
           </fieldset>
-
           <fieldset class="request__goals">
             <legend class="request__goals-title">Цель</legend>
             <ul class="request__goals-list">
@@ -80,7 +80,6 @@
               </li>
             </ul>
           </fieldset>
-
           <fieldset class="request__owner">
             <legend class="request__owner-title">Контактные данные (владельца кота)</legend>
             <ul class="request__owner-list">
@@ -100,12 +99,10 @@
               </li>
             </ul>
           </fieldset>
-
           <div class="request__comment">
             <label class="request__comment-title" for="comment-text">Комментарий</label>
             <textarea class="request__comment-text" name="comment-text" id="comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
-
           <fieldset class="request__additionally">
             <legend class="request__additionally-title">Дополнительно</legend>
             <ul class="request__additionally-list">
@@ -127,7 +124,6 @@
               </li>
             </ul>
           </fieldset>
-
           <button class="request__button button" type="submit">Отправить заявку</button>
           <small class="request__warning">
             <sup>*</sup> — Обязательные поля
@@ -145,7 +141,7 @@
         </div>
         <div class="contacts__map-wrap">
           <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858716279457!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1539247021240"
-            width="320" height="362" frameborder="0" allowfullscreen></iframe>
+            width="320" height="362" allowfullscreen title="Map"></iframe>
         </div>
       </section>
     </main>

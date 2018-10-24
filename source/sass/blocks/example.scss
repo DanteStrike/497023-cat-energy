@@ -50,7 +50,6 @@
   position: relative;
 
   width: 44.29%;
-  height: 56px;
   margin-bottom: 34px;
 
   text-align: center;
@@ -65,9 +64,8 @@
 
 .example__value {
   display: block;
-  margin: 0;
-  margin-top: 13px;
-  padding: 0;
+  margin: 13px 0 0 0;
+  padding: 0 5px 32px 5px;
 
   font: inherit;
   font-size: 24px;
@@ -148,7 +146,6 @@
 
   .example__wrap-column {
     width: 22.88%;
-    height: 72px;
 
     &--left {
       margin-right: 5.93%;
@@ -157,6 +154,7 @@
 
   .example__value {
     margin-top: 15px;
+    padding-bottom: 18px;
 
     font-size: 30px;
     line-height: 37.02px;

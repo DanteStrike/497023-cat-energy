@@ -87,8 +87,9 @@
 @media (min-width: $desktopWidth) {
   .share {
     width: 245px;
-    margin: 116px 0 0 auto;
+    margin: 0 0 0 auto;
     padding: 187px 10px 42px 10px;
+    align-self: flex-end;
 
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
