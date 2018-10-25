@@ -94,13 +94,13 @@
     box-shadow: inset 0 0 0 2px rgba(68, 68, 68, 1);
   }
 
-  &--error {
+  &--error:required {
     border-color: transparent;
     outline: 0;
     box-shadow: inset 0 0 0 2px rgba(255, 130, 130, 1);
   }
 
-  &--error ~ .request__input-icon {
+  &--error:required ~ .request__input-icon {
     color: rgba(255, 130, 130, 1);
   }
 
@@ -334,7 +334,7 @@
     box-shadow: inset 0 0 0 2px rgba(68, 68, 68, 1);
   }
 
-  &--error {
+  &--error:required {
     border-color: transparent;
     outline: 0;
     box-shadow: inset 0 0 0 2px rgba(255, 130, 130, 1);
